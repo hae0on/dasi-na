@@ -705,7 +705,22 @@ textarea {
     height: auto;
     min-height: 64px;
     padding: 16px 6vw;
+
+      /* 모바일 제목을 지정한 두 줄로 표시 */
+  .career h2,
+  .education h2,
+  .contact h2 {
+    font-size: clamp(1.5rem, 8vw, 2.6rem);
+    line-height: 1.1;
+    word-break: keep-all;
   }
+
+  .career-title-second,
+  .education .title-second-line,
+  .contact h2 em {
+    white-space: nowrap;
+  }
+  
 
   nav {
     display: none;
