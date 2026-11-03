@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="public/css/style.css">
 </head>
@@ -22,7 +23,18 @@
       <a href="#skills">역량</a>
       <a href="#works">작품</a>
       <a href="#education">교육·자격</a>
+  <header class="site-header">
+    <a class="brand" href="#intro" aria-label="처음으로">PARK<span>SUNGHYO</span></a>
+
+    <nav aria-label="주요 메뉴">
+      <a href="#about">소개</a>
+      <a href="#career">경력</a>
+      <a href="#skills">역량</a>
+      <a href="#works">작품</a>
+      <a href="#education">교육·자격</a>
     </nav>
+
+    <a class="header-contact" href="#contact">CONTACT <span>↗</span></a>
 
     <a class="header-contact" href="#contact">CONTACT <span>↗</span></a>
   </header>
@@ -170,6 +182,18 @@
 
       <!-- 작품 이미지와 설명을 이 위치에 추가하면 됩니다. -->
       <div class="work-grid" aria-label="작품 목록"></div>
+    <section id="works" class="works section-padding">
+      <div class="section-heading">
+        <p class="section-no">04</p>
+
+        <div>
+          <p class="eyebrow">SELECTED WORKS</p>
+          <h2>작품</h2>
+        </div>
+      </div>
+
+      <!-- 작품 이미지와 설명을 이 위치에 추가하면 됩니다. -->
+      <div class="work-grid" aria-label="작품 목록"></div>
     </section>
 
     <section id="education" class="education section-padding">
@@ -181,6 +205,8 @@
       </div>
 
       <ul>
+        <li><span>2026</span><strong>디지털서비스융합 전문가 양성과정 수료</strong></li>
+        <li><span>SKILL</span><strong>HTML · CSS · 생성형 AI 활용</strong></li>
         <li><span>2026</span><strong>디지털서비스융합 전문가 양성과정 수료</strong></li>
         <li><span>SKILL</span><strong>HTML · CSS · 생성형 AI 활용</strong></li>
       </ul>
@@ -210,8 +236,45 @@
   <footer>
     <a class="brand" href="#intro">PARK<span>SUNGHYO</span></a>
     <p>© 2026 PARK SUNGHYO. ALL RIGHTS RESERVED.</p>
+    <a class="brand" href="#intro">PARK<span>SUNGHYO</span></a>
+    <p>© 2026 PARK SUNGHYO. ALL RIGHTS RESERVED.</p>
   </footer>
 
+  <div class="custom-cursor" aria-hidden="true">
+    <span class="cursor-ring"></span>
+    <span class="cursor-dot"></span>
+  </div>
+
+  <script>
+    (() => {
+      const cursor = document.querySelector(".custom-cursor");
+      const ring = document.querySelector(".cursor-ring");
+
+      document.addEventListener("mousemove", (event) => {
+        cursor.classList.add("is-visible");
+        cursor.style.transform =
+          `translate3d(${event.clientX}px, ${event.clientY}px, 0)`;
+      });
+
+      document.addEventListener("mouseleave", () => {
+        cursor.classList.remove("is-visible");
+      });
+
+      document.addEventListener("touchstart", () => {
+        cursor.classList.remove("is-visible");
+      }, { passive: true });
+
+      document.querySelectorAll("a, button, input, textarea").forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          ring.classList.add("is-active");
+        });
+
+        item.addEventListener("mouseleave", () => {
+          ring.classList.remove("is-active");
+        });
+      });
+    })();
+  </script>
   <div class="custom-cursor" aria-hidden="true">
     <span class="cursor-ring"></span>
     <span class="cursor-dot"></span>
