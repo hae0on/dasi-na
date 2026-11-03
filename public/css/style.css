@@ -705,23 +705,12 @@ textarea {
     height: auto;
     min-height: 64px;
     padding: 16px 6vw;
-
-      /* 모바일 제목을 지정한 두 줄로 표시 */
-  .career h2,
-  .education h2,
-  .contact h2 {
-    font-size: clamp(1.5rem, 8vw, 2.6rem);
-    line-height: 1.1;
-    word-break: keep-all;
   }
-
+  .statement-title-second,
   .career-title-second,
-  .education .title-second-line,
-  .contact h2 em {
-    white-space: nowrap;
+  .title-second-line {
+    margin-top: 0;
   }
-  
-
   nav {
     display: none;
   }
@@ -737,7 +726,8 @@ textarea {
   }
 
   .hero h1 {
-    font-size: clamp(2.3rem, 10vw, 4.8rem);
+    font-size: clamp(2.3rem, 9vw, 4.8rem);
+    white-space: normal;
   }
 
   .hero-bottom {
@@ -781,6 +771,22 @@ textarea {
 
   .section-heading {
     margin-bottom: 45px;
+  }
+
+  /* 모바일 제목: 지정한 두 줄에 맞추기 */
+  .statement h2,
+  .career h2,
+  .education h2,
+  .contact h2 {
+    font-size: clamp(1.4rem, 7vw, 2.6rem);
+    line-height: 1.1;
+    word-break: keep-all;
+  }
+
+  .career-title-second,
+  .education .title-second-line,
+  .contact h2 em {
+    white-space: nowrap;
   }
 
   .career-item {
