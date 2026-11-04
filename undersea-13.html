@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>바닷속 13층 | 박성효 포트폴리오</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #f1eee7;
+      color: #111210;
+      font-family: "Noto Sans KR", sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      padding: 16px 6vw;
+      background: #111210;
+      color: #fff;
+    }
+    .brand {
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -.08em;
+      white-space: nowrap;
+    }
+    .brand span, .back { color: #d4ff39; }
+    .back {
+      border-bottom: 1px solid #d4ff39;
+      font-size: .78rem;
+      font-weight: 700;
+      padding-bottom: 5px;
+    }
+
+    .hero {
+      background: #071b29;
+      color: #fff;
+      padding: clamp(70px, 11vw, 150px) 7vw 7vw;
+    }
+    .hero-inner, .section-inner {
+      max-width: 1440px;
+      margin: auto;
+    }
+    .eyebrow {
+      color: #d4ff39;
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+    }
+    h1 {
+      margin: 18px 0 55px;
+      font-size: clamp(3.4rem, 8vw, 9rem);
+      letter-spacing: -.085em;
+      line-height: 1.05;
+    }
+    h1 span { color: #d4ff39; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, .65fr);
+      align-items: end;
+      gap: clamp(35px, 5vw, 90px);
+    }
+    .hero-image { width: 100%; }
+    .lead {
+      font-size: clamp(1.25rem, 2vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -.04em;
+      line-height: 1.5;
+      word-break: keep-all;
+    }
+    .intro > p:not(.lead) { color: #c8dce2; }
+    .facts {
+      display: grid;
+      grid-template-columns: 85px 1fr;
+      gap: 14px;
+      border-top: 1px solid #4b4b46;
+      margin-top: 38px;
+      padding-top: 20px;
+      font-size: .78rem;
+    }
+    .facts dt { color: #9a9a93; }
+    .facts dd { margin: 0; }
+    .jump {
+      display: inline-block;
+      margin-top: 35px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #d4ff39;
+      color: #d4ff39;
+      font-size: .82rem;
+      font-weight: 800;
+    }
+
+    section.content { padding: clamp(72px, 10vw, 140px) 7vw; }
+    .heading {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 25px;
+      border-top: 1px solid #a6a69f;
+      padding-top: 20px;
+    }
+    .heading > span {
+      color: #777870;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+    h2 {
+      margin: 4px 0 12px;
+      font-size: clamp(2.2rem, 5vw, 5.5rem);
+      letter-spacing: -.075em;
+      line-height: 1.06;
+    }
+    .heading p { color: #64655e; }
+
+    .watch { background: #e5e2da; }
+    .player {
+      max-width: 460px;
+      margin: 55px auto 0;
+      padding: 12px;
+      background: #071b29;
+    }
+    video {
+      display: block;
+      width: 100%;
+      max-height: min(80vh, 820px);
+      aspect-ratio: 9 / 16;
+      object-fit: contain;
+    }
+    .note {
+      max-width: 460px;
+      margin: 15px auto 0;
+      color: #65665e;
+      font-size: .78rem;
+    }
+
+    .storyboard { margin: 55px 0 0; }
+    .storyboard img, .characters img { width: 100%; }
+    figcaption {
+      border-top: 1px solid #bdbdb4;
+      margin-top: 12px;
+      padding-top: 12px;
+      font-size: .85rem;
+    }
+    .characters-section { background: #f7f6f2; }
+    .characters {
+      display: grid;
+      gap: 45px;
+      margin-top: 55px;
+    }
+    .characters figure { margin: 0; }
+    .characters figcaption span { color: #787871; margin-left: 18px; }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 34px 7vw;
+      background: #111210;
+      color: #b7b7af;
+      font-size: .78rem;
+    }
+    footer a { color: #d4ff39; }
+
+    @media (max-width: 700px) {
+      .hero { padding: 65px 6vw 70px; }
+      h1 { font-size: clamp(3rem, 11vw, 5rem); margin-bottom: 40px; }
+      .hero-grid, .heading { grid-template-columns: 1fr; }
+      section.content { padding: 70px 6vw; }
+      .player, .storyboard, .characters { margin-top: 38px; }
+      .player { padding: 7px; }
+      footer { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="brand" href="index.html#intro">PARK<span>SUNGHYO</span></a>
+    <a class="back" href="index.html#works">← 작품 목록</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">SELECTED WORK 02 / AI SHORT FILM</p>
+        <h1>바닷속 <span>13층</span></h1>
+
+        <div class="hero-grid">
+          <img class="hero-image" src="public/img/undersea-13/hero.png"
+               alt="나루와 또리, 쿠우가 만나는 바닷속 엘리베이터">
+          <div class="intro">
+            <p class="lead">엘리베이터 문이 열리자,<br>
+              바닷속의 새로운 친구들이 기다리고 있었어요.</p>
+            <p>나루가 또리와 쿠우를 만나 바닷속 13층으로 향하는
+              29초짜리 세로형 AI 영상입니다. 장면의 흐름과 캐릭터의 표정,
+              바다의 색감을 하나의 짧은 모험으로 엮었습니다.</p>
+
+            <dl class="facts">
+              <dt>형식</dt><dd>세로형 영상 · 29초 · 9:16</dd>
+              <dt>제작 도구</dt><dd>Google Flow</dd>
+              <dt>구성</dt><dd>영상 · 스토리보드 · 캐릭터 시트</dd>
+            </dl>
+            <a class="jump" href="#watch">영상 보기 ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="watch" class="content watch">
+      <div class="section-inner">
+        <div class="heading">
+          <span>01 / FILM</span>
+          <div>
+            <h2>완성 영상</h2>
+            <p>재생 버튼을 누르면 소리와 함께 감상할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="player">
+          <video controls playsinline preload="metadata"
+                 poster="public/img/undersea-13/video-poster.jpg">
+            <source src="public/video/undersea-13.mp4" type="video/mp4">
+            이 브라우저에서는 영상을 재생할 수 없습니다.
+          </video>
+        </div>
+        <p class="note">AI 영상 제작 · Google Flow</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="section-inner">
+        <div class="heading">
+          <span>02 / STORY</span>
+          <div>
+            <h2>장면 구성</h2>
+            <p>바닷속 13층으로 향하는 짧은 영상의 흐름을 정리했습니다.</p>
+          </div>
+        </div>
+        <figure class="storyboard">
+          <img src="public/img/undersea-13/storyboard.jpg"
+               alt="바닷속 13층 스토리보드">
+          <figcaption>스토리보드 · 바닷속 13층으로 향하는 여정</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="content characters-section">
+      <div class="section-inner">
+        <div class="heading">
+          <span>03 / CHARACTERS</span>
+          <div>
+            <h2>세 친구의 디자인</h2>
+            <p>표정과 움직임을 정리한 캐릭터 시트입니다.</p>
+          </div>
+        </div>
+
+        <div class="characters">
+          <figure>
+            <img src="public/img/undersea-13/naru-sheet.png" alt="나루 캐릭터 시트">
+            <figcaption><strong>나루</strong><span>새로운 곳을 발견하는 아이</span></figcaption>
+          </figure>
+          <figure>
+            <img src="public/img/undersea-13/ttori-sheet.png" alt="또리 캐릭터 시트">
+            <figcaption><strong>또리</strong><span>함께 헤엄치는 바다거북</span></figcaption>
+          </figure>
+          <figure>
+            <img src="public/img/undersea-13/kuu-sheet.png" alt="쿠우 캐릭터 시트">
+            <figcaption><strong>쿠우</strong><span>바다에서 만난 다정한 고래</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>바닷속 13층 · 박성효</span>
+    <a href="index.html#works">다른 작품 보기 ↑</a>
+  </footer>
+</body>
+</html>
