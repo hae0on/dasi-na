@@ -1,8 +1,5 @@
-
-
-
 /* ========================================
-   PARK SUNGHYO | 패키지·웹 디자인 포트폴리오 최종 스타일
+   PARK SUNGHYO | 패키지·웹 디자인 포트폴리오
    ======================================== */
 
 :root {
@@ -12,6 +9,7 @@
   --lime: #d4ff39;
   --muted: #787871;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -157,8 +155,9 @@ nav a:hover {
 }
 
 h1 {
-  font-size: clamp(4.8rem, 13.5vw, 13rem);
-  max-width: 900px;
+  font-size: clamp(4.8rem, 10vw, 10rem);
+  max-width: none;
+  white-space: nowrap;
 }
 
 h1 em,
@@ -294,6 +293,16 @@ h1 em,
   grid-template-columns: .35fr 1.25fr 1fr;
 }
 
+.statement h2 {
+  font-size: clamp(2.8rem, 5vw, 5.5rem);
+  word-break: keep-all;
+}
+
+.statement-title-second {
+  display: block;
+  margin-top: 5mm;
+}
+
 .statement-copy {
   align-self: end;
   font-size: 1rem;
@@ -328,6 +337,12 @@ h1 em,
   gap: 30px;
   grid-template-columns: .35fr 1.25fr;
   margin-bottom: 68px;
+}
+
+.career-title-second,
+.title-second-line {
+  display: block;
+  margin-top: 5mm;
 }
 
 .career-list {
@@ -447,7 +462,7 @@ h1 em,
   font-size: .88rem;
 }
 
-/* 작품 빈 영역 */
+/* 작품 */
 .works {
   background: #e5e2da;
 }
@@ -463,6 +478,10 @@ h1 em,
   display: grid;
   gap: 30px;
   grid-template-columns: .35fr 1.25fr 1fr;
+}
+
+.education h2 {
+  font-size: clamp(2.8rem, 4.4vw, 5rem);
 }
 
 .education ul {
@@ -525,6 +544,42 @@ h1 em,
   color: var(--lime);
   font-size: 1.1rem;
   margin-left: 26px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 10px;
+  margin: 38px auto 0;
+  max-width: 560px;
+  text-align: left;
+}
+
+.contact-form label {
+  font-size: .8rem;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #fff;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  font: inherit;
+  padding: 14px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form .contact-button {
+  border: 0;
+  font-family: inherit;
+  justify-self: center;
+  margin-top: 18px;
 }
 
 /* 푸터 */
@@ -651,7 +706,11 @@ textarea {
     min-height: 64px;
     padding: 16px 6vw;
   }
-
+  .statement-title-second,
+  .career-title-second,
+  .title-second-line {
+    margin-top: 0;
+  }
   nav {
     display: none;
   }
@@ -664,6 +723,11 @@ textarea {
     min-height: 650px;
     padding-left: 6vw;
     padding-right: 6vw;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.3rem, 9vw, 4.8rem);
+    white-space: normal;
   }
 
   .hero-bottom {
@@ -707,6 +771,22 @@ textarea {
 
   .section-heading {
     margin-bottom: 45px;
+  }
+
+  /* 모바일 제목: 지정한 두 줄에 맞추기 */
+  .statement h2,
+  .career h2,
+  .education h2,
+  .contact h2 {
+    font-size: clamp(1.4rem, 7vw, 2.6rem);
+    line-height: 1.1;
+    word-break: keep-all;
+  }
+
+  .career-title-second,
+  .education .title-second-line,
+  .contact h2 em {
+    white-space: nowrap;
   }
 
   .career-item {
@@ -775,7 +855,7 @@ textarea {
   }
 }
 
-/* 움직임 줄이기 설정 사용자 배려 */
+/* 움직임 줄이기 설정 */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -785,4 +865,3 @@ textarea {
     scroll-behavior: auto !important;
   }
 }
-```
