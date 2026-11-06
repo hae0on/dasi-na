@@ -81,11 +81,51 @@
 .book-view-link:hover { gap: 40px; }
 .book-view-link:focus-visible { outline: 2px solid #d4ff39; outline-offset: 5px; }
 
+/* 두 번째 작품: 세로형 AI 영상 */
+.work-grid { display: grid; gap: clamp(24px, 3.5vw, 50px); }
+.film-feature { background: #071b29; color: #fff; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr); overflow: hidden; }
+.film-feature-art { display: block; min-height: min(42vw, 620px); min-width: 0; overflow: hidden; position: relative; }
+.film-feature-art::after { background: linear-gradient(180deg, transparent 55%, rgba(2,14,27,.5)); content: ""; inset: 0; position: absolute; }
+.film-feature-art img { display: block; height: 100%; inset: 0; object-fit: cover; object-position: center; position: absolute; transition: transform .4s ease; width: 100%; }
+.film-feature-art:hover img { transform: scale(1.035); }
+.film-play { align-items: center; background: #d4ff39; border-radius: 50%; color: #111210; display: flex; font-size: 1.1rem; height: 68px; justify-content: center; left: 50%; padding-left: 4px; position: absolute; top: 50%; transform: translate(-50%, -50%); width: 68px; z-index: 1; }
+.film-duration { bottom: 22px; color: #fff; font-size: .72rem; font-weight: 800; left: 24px; letter-spacing: .12em; position: absolute; z-index: 1; }
+.film-feature-copy { align-self: end; padding: clamp(32px, 5vw, 76px); }
+.film-feature h3 { font-size: clamp(2.5rem, 5vw, 5.6rem); letter-spacing: -.08em; line-height: 1.08; margin: 20px 0 28px; }
+.film-feature-copy > p:not(.book-kicker) { color: #d5e4e8; font-size: clamp(.9rem, 1.15vw, 1.05rem); line-height: 1.75; max-width: 38ch; }
+.film-feature .book-meta { color: #b2c4c9; }
+.film-feature .book-view-link:focus-visible, .film-feature-art:focus-visible { outline: 3px solid #d4ff39; outline-offset: -5px; }
+
+.film-detail-hero { background: #071b29; color: #fff; padding: clamp(70px, 11vw, 150px) 7vw 7vw; }
+.film-detail-inner { margin: auto; max-width: 1440px; }
+.film-detail-hero h1 { font-size: clamp(3.4rem, 8vw, 9rem); letter-spacing: -.085em; line-height: 1.05; margin: 18px 0 55px; }
+.film-detail-hero h1 span { color: #d4ff39; }
+.film-hero-grid { align-items: end; display: grid; gap: clamp(35px, 5vw, 90px); grid-template-columns: minmax(0, 1.2fr) minmax(260px, .65fr); }
+.film-hero-art img { display: block; width: 100%; }
+.film-hero-copy .lead { font-size: clamp(1.25rem, 2vw, 2rem); font-weight: 700; letter-spacing: -.04em; line-height: 1.5; margin: 0 0 22px; word-break: keep-all; }
+.film-hero-copy > p:not(.lead) { color: #c8dce2; font-size: .94rem; line-height: 1.75; max-width: 46ch; }
+.film-jump { border-bottom: 1px solid #d4ff39; color: #d4ff39 !important; display: inline-flex; font-size: .82rem; font-weight: 800; gap: 35px; margin-top: 35px; padding-bottom: 8px; }
+.film-watch { background: #e5e2da; }
+.film-player-wrap { background: #071b29; margin: 55px auto 0; max-width: 460px; padding: 12px; }
+.film-player-wrap video { aspect-ratio: 9 / 16; display: block; max-height: min(80vh, 820px); object-fit: contain; width: 100%; }
+.film-player-note { color: #65665e; font-size: .78rem; margin: 15px auto 0; max-width: 460px; }
+.film-process { background: #f1eee7; }
+.film-storyboard { margin: 55px 0 0; }
+.film-storyboard a, .film-character-grid a { background: #fff; display: block; overflow: hidden; }
+.film-storyboard img, .film-character-grid img { display: block; height: auto; width: 100%; }
+.film-storyboard figcaption { color: #6f706a; font-size: .8rem; margin-top: 13px; }
+.film-characters { background: #f7f6f2; }
+.film-character-grid { display: grid; gap: 45px; margin-top: 55px; }
+.film-character-grid figure { margin: 0; min-width: 0; }
+.film-character-grid figcaption { align-items: baseline; border-top: 1px solid #bdbdb4; display: flex; gap: 20px; padding-top: 13px; }
+.film-character-grid figcaption strong { font-size: 1.05rem; }
+.film-character-grid figcaption span { color: #787871; font-size: .78rem; }
+
 /* 독립 작품 페이지 */
 .book-page-body {
   background: #f1eee7;
   color: #111210;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Paperlogy", sans-serif;
   line-height: 1.6;
   margin: 0;
 }
@@ -126,6 +166,28 @@
 .book-section-heading > span { color: #777870; font-size: .75rem; font-weight: 800; letter-spacing: .12em; }
 .book-section-heading h2 { font-size: clamp(2.2rem, 5vw, 5.5rem); letter-spacing: -.075em; line-height: 1.06; margin: 4px 0 12px; }
 .book-section-heading p { color: #64655e; font-size: .9rem; margin: 0; }
+.nuri-feature { background: #fff8ef; }
+.nuri-feature-intro { display: grid; gap: clamp(28px, 6vw, 100px); grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); margin: clamp(45px, 6vw, 85px) 0 45px 125px; }
+.nuri-feature-lead { border-top: 2px solid #cf5253; padding-top: 16px; }
+.nuri-feature-lead span { color: #b44749; font-size: .72rem; font-weight: 800; letter-spacing: .13em; }
+.nuri-feature-lead p { font-size: clamp(1.6rem, 2.5vw, 2.7rem); font-weight: 800; letter-spacing: -.065em; line-height: 1.35; margin: 25px 0 0; word-break: keep-all; }
+.nuri-feature-copy { border-top: 1px solid #d5cbc0; padding-top: 24px; }
+.nuri-feature-copy p { color: #45413d; font-size: clamp(.95rem, 1.15vw, 1.08rem); line-height: 1.85; margin: 0; word-break: keep-all; }
+.nuri-feature-copy p + p { margin-top: 18px; }
+.nuri-feature-sheet { margin: 0; }
+.nuri-feature-sheet a { background: #fff; display: block; overflow: hidden; }
+.nuri-feature-sheet img { height: auto; width: 100%; }
+.nuri-feature-sheet figcaption { border-top: 1px solid #d5cbc0; color: #6f6861; display: flex; flex-wrap: wrap; font-size: .76rem; gap: 8px 25px; justify-content: space-between; padding-top: 14px; }
+.project-approach { max-width: 1600px; }
+.book-approach { background: #f1eee7; }
+.film-approach { background: #e8f1f3; }
+.project-approach-grid { display: grid; gap: clamp(26px, 4vw, 72px); grid-template-columns: repeat(2, minmax(0, 1fr)); margin: clamp(42px, 6vw, 80px) 0 0 125px; }
+.project-approach-card { border-top: 2px solid #111210; min-width: 0; padding-top: 20px; }
+.project-approach-label { color: #71736d; display: block; font-size: .7rem; font-weight: 800; letter-spacing: .13em; }
+.project-approach-card h3 { font-size: clamp(1.6rem, 2.3vw, 2.45rem); letter-spacing: -.065em; line-height: 1.15; margin: 22px 0; }
+.project-approach-card p { color: #41433e; font-size: clamp(.95rem, 1.15vw, 1.08rem); line-height: 1.9; margin: 0; max-width: 48ch; word-break: keep-all; }
+.film-approach .project-approach-card { border-color: #24788c; }
+.film-approach .project-approach-label { color: #387b89; }
 .book-story { background: #e5e2da; }
 .book-story-list { display: grid; gap: clamp(55px, 7vw, 110px); margin-top: 56px; }
 .book-story-item { display: grid; gap: 20px; }
@@ -168,6 +230,12 @@
   .book-intro { padding: 0; }
   .book-section { padding: 70px 6vw; }
   .book-section-heading { gap: 10px; grid-template-columns: 1fr; }
+  .nuri-feature-intro { gap: 28px; grid-template-columns: 1fr; margin: 38px 0 32px; }
+  .nuri-feature-lead p { margin-top: 14px; }
+  .nuri-feature-copy { padding-top: 18px; }
+  .project-approach-grid { gap: 42px; grid-template-columns: 1fr; margin: 38px 0 0; }
+  .project-approach-card h3 { margin: 17px 0 16px; }
+  .project-approach-card p { line-height: 1.8; }
   .book-story-list, .book-character-grid { margin-top: 38px; }
   .book-story-caption { display: block; }
   .book-story-caption span { display: block; margin-top: 4px; }
@@ -179,6 +247,16 @@
   .book-half:last-child img { right: 0; }
   .book-character-grid { grid-template-columns: 1fr; }
   .book-all-list { gap: 44px; }
+  .film-feature { grid-template-columns: 1fr; }
+  .film-feature-art { aspect-ratio: 4 / 3; min-height: 0; }
+  .film-feature-copy { padding: 36px 6vw 45px; }
+  .film-feature h3 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .film-detail-hero { padding: 65px 6vw 70px; }
+  .film-detail-hero h1 { font-size: clamp(3rem, 11vw, 5rem); margin-bottom: 40px; }
+  .film-hero-grid { grid-template-columns: 1fr; }
+  .film-player-wrap { margin-top: 38px; padding: 7px; }
+  .film-storyboard, .film-character-grid { margin-top: 38px; }
+  .film-character-grid { gap: 40px; }
 }
 
-@media (prefers-reduced-motion: reduce) { .book-view-link { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .book-view-link, .film-feature-art img { transition: none; } }
