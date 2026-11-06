@@ -1,5 +1,5 @@
 /* ========================================
-   PARK SUNGHYO | 패키지·웹 디자인 포트폴리오
+   PARK SUNGHYO | 패키지·웹 디자인 포트폴리오 최종 스타일
    ======================================== */
 
 :root {
@@ -23,7 +23,7 @@ html {
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Paperlogy", sans-serif;
   line-height: 1.55;
 }
 
@@ -155,15 +155,14 @@ nav a:hover {
 }
 
 h1 {
-  font-size: clamp(4.8rem, 10vw, 10rem);
-  max-width: none;
-  white-space: nowrap;
+  font-size: clamp(4.8rem, 13.5vw, 13rem);
+  max-width: 900px;
 }
 
 h1 em,
 .contact h2 em {
   color: var(--lime);
-  font-family: "Playfair Display", serif;
+  font-family: "Paperlogy", sans-serif;
   font-weight: 600;
 }
 
@@ -293,16 +292,6 @@ h1 em,
   grid-template-columns: .35fr 1.25fr 1fr;
 }
 
-.statement h2 {
-  font-size: clamp(2.8rem, 5vw, 5.5rem);
-  word-break: keep-all;
-}
-
-.statement-title-second {
-  display: block;
-  margin-top: 5mm;
-}
-
 .statement-copy {
   align-self: end;
   font-size: 1rem;
@@ -337,12 +326,6 @@ h1 em,
   gap: 30px;
   grid-template-columns: .35fr 1.25fr;
   margin-bottom: 68px;
-}
-
-.career-title-second,
-.title-second-line {
-  display: block;
-  margin-top: 5mm;
 }
 
 .career-list {
@@ -384,7 +367,7 @@ h1 em,
 
 .career-number {
   color: var(--muted);
-  font: italic 1.5rem "Playfair Display", serif;
+  font: italic 1.5rem "Paperlogy", sans-serif;
 }
 
 /* 경력 요약 */
@@ -447,7 +430,7 @@ h1 em,
 
 .skill-grid span {
   color: var(--muted);
-  font-family: "Playfair Display", serif;
+  font-family: "Paperlogy", sans-serif;
   font-style: italic;
 }
 
@@ -462,7 +445,7 @@ h1 em,
   font-size: .88rem;
 }
 
-/* 작품 */
+/* 작품 빈 영역 */
 .works {
   background: #e5e2da;
 }
@@ -478,10 +461,6 @@ h1 em,
   display: grid;
   gap: 30px;
   grid-template-columns: .35fr 1.25fr 1fr;
-}
-
-.education h2 {
-  font-size: clamp(2.8rem, 4.4vw, 5rem);
 }
 
 .education ul {
@@ -546,42 +525,6 @@ h1 em,
   margin-left: 26px;
 }
 
-.contact-form {
-  display: grid;
-  gap: 10px;
-  margin: 38px auto 0;
-  max-width: 560px;
-  text-align: left;
-}
-
-.contact-form label {
-  font-size: .8rem;
-  font-weight: 700;
-  margin-top: 8px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  background: #fff;
-  border: 1px solid var(--ink);
-  border-radius: 0;
-  font: inherit;
-  padding: 14px;
-  width: 100%;
-}
-
-.contact-form textarea {
-  min-height: 140px;
-  resize: vertical;
-}
-
-.contact-form .contact-button {
-  border: 0;
-  font-family: inherit;
-  justify-self: center;
-  margin-top: 18px;
-}
-
 /* 푸터 */
 footer {
   align-items: center;
@@ -596,62 +539,6 @@ footer p {
   color: #999991;
   font-size: .62rem;
   letter-spacing: .06em;
-}
-
-/* 원형 마우스 포인터 */
-body,
-a,
-button,
-input,
-textarea {
-  cursor: none;
-}
-
-.custom-cursor {
-  display: block;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  transition: opacity .2s;
-  z-index: 100;
-}
-
-.custom-cursor.is-visible {
-  opacity: 1;
-}
-
-.cursor-dot {
-  background: var(--lime);
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-  display: block;
-  height: 8px;
-  left: -4px;
-  position: absolute;
-  top: -4px;
-  width: 8px;
-}
-
-.cursor-ring {
-  border: 2px solid var(--lime);
-  border-radius: 50%;
-  display: block;
-  height: 32px;
-  left: -16px;
-  position: absolute;
-  top: -16px;
-  transition: height .24s ease, width .24s ease, background-color .24s ease, left .24s ease, top .24s ease;
-  width: 32px;
-}
-
-.cursor-ring.is-active {
-  background-color: rgba(212, 255, 57, .28);
-  height: 54px;
-  left: -27px;
-  top: -27px;
-  width: 54px;
 }
 
 /* 애니메이션 */
@@ -706,11 +593,7 @@ textarea {
     min-height: 64px;
     padding: 16px 6vw;
   }
-  .statement-title-second,
-  .career-title-second,
-  .title-second-line {
-    margin-top: 0;
-  }
+
   nav {
     display: none;
   }
@@ -723,11 +606,6 @@ textarea {
     min-height: 650px;
     padding-left: 6vw;
     padding-right: 6vw;
-  }
-
-  .hero h1 {
-    font-size: clamp(2.3rem, 9vw, 4.8rem);
-    white-space: normal;
   }
 
   .hero-bottom {
@@ -771,22 +649,6 @@ textarea {
 
   .section-heading {
     margin-bottom: 45px;
-  }
-
-  /* 모바일 제목: 지정한 두 줄에 맞추기 */
-  .statement h2,
-  .career h2,
-  .education h2,
-  .contact h2 {
-    font-size: clamp(1.4rem, 7vw, 2.6rem);
-    line-height: 1.1;
-    word-break: keep-all;
-  }
-
-  .career-title-second,
-  .education .title-second-line,
-  .contact h2 em {
-    white-space: nowrap;
   }
 
   .career-item {
@@ -855,7 +717,7 @@ textarea {
   }
 }
 
-/* 움직임 줄이기 설정 */
+/* 움직임 줄이기 설정 사용자 배려 */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -866,106 +728,19 @@ textarea {
   }
 }
 
-.work-grid {
-  border: 0;
-  min-height: 0;
-  display: grid;
-  gap: clamp(24px, 3.5vw, 50px);
-}
-
-.film-feature {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
-  background: #071b29;
-  color: #fff;
-  overflow: hidden;
-}
-
-.film-feature-art {
-  display: block;
-  position: relative;
-  min-width: 0;
-  min-height: min(42vw, 620px);
-  overflow: hidden;
-}
-
-.film-feature-art img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.film-play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: grid;
-  place-items: center;
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  background: #d4ff39;
-  color: #111210;
-  font-size: 1.2rem;
-  padding-left: 4px;
-}
-
-.film-duration {
-  position: absolute;
-  bottom: 22px;
-  left: 24px;
-  font-size: .72rem;
-  font-weight: 800;
-  letter-spacing: .12em;
-}
-
-.film-feature-copy {
-  align-self: end;
-  padding: clamp(32px, 5vw, 76px);
-}
-
-.film-kicker {
-  color: #d4ff39;
-  font-size: .7rem;
-  font-weight: 800;
-  letter-spacing: .16em;
-}
-
-.film-feature h3 {
-  margin: 20px 0 28px;
-  font-size: clamp(2.5rem, 5vw, 5.6rem);
-  letter-spacing: -.08em;
-  line-height: 1.08;
-}
-
-.film-feature-copy > p:not(.film-kicker) {
-  color: #d5e4e8;
-  line-height: 1.75;
-}
-
-.film-meta {
-  border-top: 1px solid rgba(255,255,255,.24);
-  margin-top: 36px;
-  padding-top: 16px;
-  font-size: .72rem;
-}
-
-.film-view-link {
-  display: inline-block;
-  margin-top: 38px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #d4ff39;
-  color: #d4ff39;
-  font-size: .78rem;
-  font-weight: 800;
-}
-
+/* 이후 대화에서 확정한 제목 간격과 모바일 수정 */
+h1 { font-size: clamp(4.8rem, 10vw, 10rem); max-width: none; white-space: nowrap; }
+.statement h2 { font-size: clamp(2.8rem, 5vw, 5.5rem); word-break: keep-all; }
+.statement-title-second, .career-title-second, .title-second-line { display: block; margin-top: 5mm; }
+.education h2 { font-size: clamp(2.8rem, 4.4vw, 5rem); }
+.contact-form { display: grid; gap: 10px; margin: 38px auto 0; max-width: 560px; text-align: left; }
+.contact-form label { font-size: .8rem; font-weight: 700; margin-top: 8px; }
+.contact-form input, .contact-form textarea { background: #fff; border: 1px solid var(--ink); border-radius: 0; font: inherit; padding: 14px; width: 100%; }
+.contact-form textarea { min-height: 140px; resize: vertical; }
+.contact-form .contact-button { border: 0; font-family: inherit; justify-self: center; margin-top: 18px; }
 @media (max-width: 700px) {
-  .film-feature { grid-template-columns: 1fr; }
-  .film-feature-art { aspect-ratio: 4 / 3; min-height: 0; }
-  .film-feature-copy { padding: 36px 6vw 45px; }
-  .film-feature h3 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .hero h1 { font-size: clamp(2.3rem, 9vw, 4.8rem); white-space: normal; }
+  .statement-title-second, .career-title-second, .title-second-line { margin-top: 0; }
+  .statement h2, .career h2, .education h2, .contact h2 { font-size: clamp(1.4rem, 7vw, 2.6rem); line-height: 1.1; word-break: keep-all; }
+  .career-title-second, .education .title-second-line, .contact h2 em { white-space: nowrap; }
 }
