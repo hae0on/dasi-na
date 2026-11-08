@@ -1,0 +1,78 @@
+/* Poster portfolio: neutral base color can be changed through --poster-bg. */
+.poster-page-body {
+  --poster-bg: #f4f2ed;
+  background: var(--poster-bg);
+  color: #25231f;
+  font-family: "Paperlogy", sans-serif;
+}
+
+.poster-page-body .book-site-header { background: #111210; border: 0; color: #fff; }
+.poster-page-body .book-brand span { color: #d4ff39; }
+.poster-page-body .book-back { border-color: #d4ff39; color: #d4ff39 !important; }
+.poster-page-body a:focus-visible { outline-color: #526d00; }
+
+.poster-intro { background: var(--poster-bg); padding: clamp(65px, 7vw, 110px) 7vw clamp(48px, 5vw, 75px); }
+.poster-intro-inner, .poster-gallery-inner { margin: auto; max-width: 1600px; }
+.poster-intro-inner { align-items: end; display: grid; gap: 35px; grid-template-columns: 1.6fr .7fr; }
+.poster-eyebrow { color: #6a695f; font-size: .75rem; font-weight: 800; letter-spacing: .16em; margin: 0 0 28px; }
+.poster-eyebrow span { color: #9a9a91; padding: 0 6px; }
+.poster-intro h1 { font-size: clamp(3.1rem, 7.4vw, 7.8rem); font-weight: 800; letter-spacing: -.075em; line-height: 1.15; margin: 0; word-break: keep-all; }
+.poster-intro h1 em { color: #465900; font-style: normal; }
+.poster-intro-copy { border-top: 1px solid #c5c4b9; padding-top: 19px; }
+.poster-intro-copy p { font-size: clamp(.95rem, 1.25vw, 1.15rem); line-height: 1.85; margin: 0 0 22px; word-break: keep-all; }
+.poster-intro-copy span { color: #65655b; font-size: .76rem; font-weight: 700; }
+
+.poster-gallery { background: var(--poster-bg); padding: 0 7vw clamp(70px, 8vw, 130px); }
+.poster-pairs { display: grid; gap: clamp(26px, 3vw, 48px); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.poster-pair { min-width: 0; }
+.poster-pair-heading { align-items: baseline; border-top: 2px solid #20211d; display: flex; gap: 12px; justify-content: space-between; margin-bottom: 18px; padding-top: 15px; }
+.poster-pair-heading span { color: #68675d; font-size: .7rem; font-weight: 800; letter-spacing: .1em; white-space: nowrap; }
+.poster-pair-heading h2 { font-size: clamp(1rem, 1.5vw, 1.35rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.4; margin: 0; text-align: right; }
+.poster-pair-grid { display: grid; gap: clamp(12px, 1.25vw, 22px); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.poster-card { min-width: 0; }
+.poster-art { align-items: center; background: #e8e6df; border: 1px solid #e1dfd7; display: flex; height: clamp(320px, 30vw, 470px); justify-content: center; overflow: hidden; padding: clamp(9px, 1.1vw, 18px); position: relative; }
+.poster-art img { height: 100%; max-height: 100%; max-width: 100%; object-fit: contain; width: 100%; }
+.poster-zoom { background: rgba(17, 18, 16, .88); bottom: 12px; color: #fff; font-size: .7rem; font-weight: 700; opacity: 0; padding: 8px 10px; position: absolute; right: 12px; transition: opacity .2s; }
+.poster-art:hover .poster-zoom, .poster-art:focus-visible .poster-zoom { opacity: 1; }
+.poster-card-caption { min-height: 113px; padding: 17px 2px 0; }
+.poster-card-caption span { color: #67675e; font-size: .67rem; font-weight: 800; letter-spacing: .12em; }
+.poster-card-caption h3 { font-size: clamp(1rem, 1.25vw, 1.3rem); letter-spacing: -.04em; margin: 7px 0 6px; }
+.poster-card-caption p { color: #5f5e55; font-size: .78rem; line-height: 1.6; margin: 0; word-break: keep-all; }
+.poster-gallery-note { color: #6b6a63; font-size: .72rem; margin: 31px 0 0; text-align: right; }
+.poster-footer { align-items: center; background: #111210; color: #fff; display: flex; font-size: .75rem; justify-content: space-between; padding: 28px 7vw; }
+.poster-footer a { border-bottom: 1px solid #d4ff39; color: #d4ff39 !important; padding-bottom: 5px; }
+
+/* Third work card on the main page. */
+.poster-feature { background: #252720; color: #fff; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr); overflow: hidden; }
+.poster-feature-art { align-items: center; background: #e7e5dd; display: flex; gap: 15px; justify-content: center; min-height: min(42vw, 620px); overflow: hidden; padding: clamp(16px, 2vw, 36px); }
+.poster-feature-art img { background: #fff; box-shadow: 0 12px 28px rgba(20, 20, 15, .12); height: clamp(235px, 27vw, 430px); max-width: 48%; object-fit: contain; }
+.poster-feature-art img:last-child { height: clamp(170px, 19vw, 300px); }
+.poster-feature-copy { align-self: end; padding: clamp(32px, 5vw, 76px); }
+.poster-feature .book-kicker, .poster-feature .book-view-link { color: #d4ff39; }
+.poster-feature h3 { font-size: clamp(2.5rem, 5vw, 5.6rem); letter-spacing: -.08em; line-height: 1.08; margin: 20px 0 28px; }
+.poster-feature-copy > p:not(.book-kicker) { color: #d4d5cd; font-size: clamp(.9rem, 1.15vw, 1.05rem); line-height: 1.75; max-width: 38ch; }
+.poster-feature .book-meta { border-top-color: rgba(255, 255, 255, .3); color: #c9cac2; }
+.poster-feature .book-view-link { border-color: #d4ff39; }
+
+@media (max-width: 1100px) {
+  .poster-pairs { grid-template-columns: 1fr; gap: 45px; }
+  .poster-art { height: clamp(310px, 50vw, 500px); }
+}
+@media (max-width: 700px) {
+  .poster-intro { padding: 68px 6vw 38px; }
+  .poster-intro-inner { gap: 30px; grid-template-columns: 1fr; }
+  .poster-intro h1 { font-size: clamp(2.75rem, 10vw, 4.7rem); }
+  .poster-gallery { padding: 0 6vw 85px; }
+  .poster-pair-heading { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .poster-art { height: clamp(230px, 66vw, 420px); }
+  .poster-card-caption { min-height: 135px; }
+  .poster-footer { gap: 22px; padding: 26px 6vw; }
+  .poster-feature { grid-template-columns: 1fr; }
+  .poster-feature-art { min-height: 330px; }
+}
+@media (max-width: 420px) {
+  .poster-pair-grid { grid-template-columns: 1fr; gap: 23px; }
+  .poster-art { height: 470px; }
+  .poster-card-caption { min-height: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .poster-zoom { transition: none; } }
