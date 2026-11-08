@@ -1,4 +1,15 @@
 /* 달빛 아래 꿈 우체국 — 기존 포트폴리오에 추가하는 작품 스타일 */
+:root {
+  --ink: #36304E;
+  --paper: #F8F6FF;
+  --primary: #8871D8;
+  --primary-dark: #59439B;
+  --mint: #76CDBB;
+  --sun: #FFD98E;
+  --muted: #615B73;
+  --line: rgba(54, 48, 78, .2);
+}
+
 .work-grid {
   border: 0;
   min-height: 0;
@@ -7,14 +18,14 @@
 .book-feature {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
-  background: #111210;
-  color: #f1eee7;
+  background: #E8E1FA;
+  color: var(--ink);
   overflow: hidden;
 }
 
 .book-feature-art {
   aspect-ratio: 4 / 5;
-  background: #092252;
+  background: #E8E1FA;
   overflow: hidden;
   position: relative;
 }
@@ -35,7 +46,7 @@
 }
 
 .book-kicker {
-  color: #d4ff39;
+  color: var(--primary-dark);
   font-size: .7rem;
   font-weight: 800;
   letter-spacing: .16em;
@@ -50,15 +61,15 @@
 }
 
 .book-feature-copy > p:not(.book-kicker) {
-  color: #d5d5cd;
+  color: var(--muted);
   font-size: clamp(.9rem, 1.15vw, 1.05rem);
   line-height: 1.75;
   max-width: 34ch;
 }
 
 .book-meta {
-  border-top: 1px solid rgba(255,255,255,.24);
-  color: #a9aaa3;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
   display: flex;
   flex-wrap: wrap;
   font-size: .72rem;
@@ -68,8 +79,8 @@
 }
 
 .book-view-link {
-  border-bottom: 1px solid #d4ff39;
-  color: #d4ff39;
+  border-bottom: 1px solid var(--primary);
+  color: var(--primary-dark);
   display: inline-flex;
   font-size: .78rem;
   font-weight: 800;
@@ -79,52 +90,87 @@
 }
 
 .book-view-link:hover { gap: 40px; }
-.book-view-link:focus-visible { outline: 2px solid #d4ff39; outline-offset: 5px; }
+.book-view-link:focus-visible { outline: 2px solid var(--primary-dark); outline-offset: 5px; }
 
 /* 두 번째 작품: 세로형 AI 영상 */
 .work-grid { display: grid; gap: clamp(24px, 3.5vw, 50px); }
-.film-feature { background: #071b29; color: #fff; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr); overflow: hidden; }
+.film-feature { background: #E9F7F3; color: var(--ink); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr); overflow: hidden; }
 .film-feature-art { display: block; min-height: min(42vw, 620px); min-width: 0; overflow: hidden; position: relative; }
 .film-feature-art::after { background: linear-gradient(180deg, transparent 55%, rgba(2,14,27,.5)); content: ""; inset: 0; position: absolute; }
 .film-feature-art img { display: block; height: 100%; inset: 0; object-fit: cover; object-position: center; position: absolute; transition: transform .4s ease; width: 100%; }
 .film-feature-art:hover img { transform: scale(1.035); }
-.film-play { align-items: center; background: #d4ff39; border-radius: 50%; color: #111210; display: flex; font-size: 1.1rem; height: 68px; justify-content: center; left: 50%; padding-left: 4px; position: absolute; top: 50%; transform: translate(-50%, -50%); width: 68px; z-index: 1; }
+.film-play { align-items: center; background: var(--sun); border-radius: 50%; color: var(--ink); display: flex; font-size: 1.1rem; height: 68px; justify-content: center; left: 50%; padding-left: 4px; position: absolute; top: 50%; transform: translate(-50%, -50%); width: 68px; z-index: 1; }
 .film-duration { bottom: 22px; color: #fff; font-size: .72rem; font-weight: 800; left: 24px; letter-spacing: .12em; position: absolute; z-index: 1; }
 .film-feature-copy { align-self: end; padding: clamp(32px, 5vw, 76px); }
 .film-feature h3 { font-size: clamp(2.5rem, 5vw, 5.6rem); letter-spacing: -.08em; line-height: 1.08; margin: 20px 0 28px; }
-.film-feature-copy > p:not(.book-kicker) { color: #d5e4e8; font-size: clamp(.9rem, 1.15vw, 1.05rem); line-height: 1.75; max-width: 38ch; }
-.film-feature .book-meta { color: #b2c4c9; }
-.film-feature .book-view-link:focus-visible, .film-feature-art:focus-visible { outline: 3px solid #d4ff39; outline-offset: -5px; }
+.film-feature-copy > p:not(.book-kicker) { color: var(--muted); font-size: clamp(.9rem, 1.15vw, 1.05rem); line-height: 1.75; max-width: 38ch; }
+.film-feature .book-meta { color: var(--muted); }
+.film-feature .book-view-link:focus-visible, .film-feature-art:focus-visible { outline: 3px solid var(--primary-dark); outline-offset: -5px; }
 
-.film-detail-hero { background: #071b29; color: #fff; padding: clamp(70px, 11vw, 150px) 7vw 7vw; }
+.film-detail-hero { background: #E9F7F3; color: var(--ink); padding: clamp(70px, 11vw, 150px) 7vw 7vw; }
 .film-detail-inner { margin: auto; max-width: 1440px; }
 .film-detail-hero h1 { font-size: clamp(3.4rem, 8vw, 9rem); letter-spacing: -.085em; line-height: 1.05; margin: 18px 0 55px; }
-.film-detail-hero h1 span { color: #d4ff39; }
+.film-detail-hero h1 span { color: var(--primary); }
 .film-hero-grid { align-items: end; display: grid; gap: clamp(35px, 5vw, 90px); grid-template-columns: minmax(0, 1.2fr) minmax(260px, .65fr); }
 .film-hero-art img { display: block; width: 100%; }
 .film-hero-copy .lead { font-size: clamp(1.25rem, 2vw, 2rem); font-weight: 700; letter-spacing: -.04em; line-height: 1.5; margin: 0 0 22px; word-break: keep-all; }
-.film-hero-copy > p:not(.lead) { color: #c8dce2; font-size: .94rem; line-height: 1.75; max-width: 46ch; }
-.film-jump { border-bottom: 1px solid #d4ff39; color: #d4ff39 !important; display: inline-flex; font-size: .82rem; font-weight: 800; gap: 35px; margin-top: 35px; padding-bottom: 8px; }
-.film-watch { background: #e5e2da; }
-.film-player-wrap { background: #071b29; margin: 55px auto 0; max-width: 460px; padding: 12px; }
+.film-hero-copy > p:not(.lead) { color: var(--muted); font-size: .94rem; line-height: 1.75; max-width: 46ch; }
+.film-jump { border-bottom: 1px solid var(--primary); color: var(--primary-dark) !important; display: inline-flex; font-size: .82rem; font-weight: 800; gap: 35px; margin-top: 35px; padding-bottom: 8px; }
+.film-watch { background: #E8E1FA; }
+.film-player-wrap { background: var(--ink); margin: 55px auto 0; max-width: 460px; padding: 12px; }
 .film-player-wrap video { aspect-ratio: 9 / 16; display: block; max-height: min(80vh, 820px); object-fit: contain; width: 100%; }
-.film-player-note { color: #65665e; font-size: .78rem; margin: 15px auto 0; max-width: 460px; }
-.film-process { background: #f1eee7; }
+.film-player-note { color: var(--muted); font-size: .78rem; margin: 15px auto 0; max-width: 460px; }
+.film-process { background: var(--paper); }
 .film-storyboard { margin: 55px 0 0; }
 .film-storyboard a, .film-character-grid a { background: #fff; display: block; overflow: hidden; }
 .film-storyboard img, .film-character-grid img { display: block; height: auto; width: 100%; }
-.film-storyboard figcaption { color: #6f706a; font-size: .8rem; margin-top: 13px; }
-.film-characters { background: #f7f6f2; }
+.film-storyboard figcaption { color: var(--muted); font-size: .8rem; margin-top: 13px; }
+.film-characters { background: #FFF9ED; }
 .film-character-grid { display: grid; gap: 45px; margin-top: 55px; }
 .film-character-grid figure { margin: 0; min-width: 0; }
-.film-character-grid figcaption { align-items: baseline; border-top: 1px solid #bdbdb4; display: flex; gap: 20px; padding-top: 13px; }
+.film-character-grid figcaption { align-items: baseline; border-top: 1px solid var(--line); display: flex; gap: 20px; padding-top: 13px; }
 .film-character-grid figcaption strong { font-size: 1.05rem; }
-.film-character-grid figcaption span { color: #787871; font-size: .78rem; }
+.film-character-grid figcaption span { color: var(--muted); font-size: .78rem; }
+
+/* 바닷속 13층: 라벤더 시안 전용 쇼케이스 */
+.film-page-body .film-detail-hero { background: url("../img/undersea-13/decor-overlay.png") center top / 100% auto no-repeat, linear-gradient(145deg, #EEE5FC 0%, #E7E3FA 52%, #DADFFA 100%); }
+.film-page-body .film-hero-grid { align-items: center; gap: clamp(26px, 4.5vw, 76px); grid-template-columns: minmax(300px, .85fr) minmax(0, 1.15fr); }
+.film-page-body .film-hero-copy .book-kicker { color: var(--primary-dark); }
+.film-page-body .film-detail-hero h1 { font-size: clamp(3.15rem, 5.4vw, 6.5rem); line-height: 1.08; margin: 24px 0 28px; }
+.film-page-body .film-hero-copy .lead { font-size: clamp(1.2rem, 1.7vw, 1.7rem); margin-bottom: 18px; }
+.film-page-body .film-hero-copy > p:not(.lead):not(.book-kicker) { line-height: 1.85; }
+.film-page-body .film-jump { margin-top: 25px; }
+.film-page-body .film-hero-art { aspect-ratio: 3 / 2; border: 5px solid rgba(255, 255, 255, .9); border-radius: 20px; box-shadow: 0 22px 55px rgba(59, 45, 117, .2); display: block; overflow: hidden; position: relative; }
+.film-page-body .film-hero-art img { height: 100%; object-fit: cover; width: 100%; }
+.film-preview-play { align-items: center; background: rgba(79, 62, 151, .88); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 9px 32px rgba(35, 24, 89, .28); color: #fff; display: flex; font-size: 1.35rem; height: 74px; justify-content: center; left: 50%; padding-left: 5px; position: absolute; top: 50%; transform: translate(-50%, -50%); transition: transform .2s, background .2s; width: 74px; }
+.film-hero-art:hover .film-preview-play, .film-hero-art:focus-visible .film-preview-play { background: var(--primary-dark); transform: translate(-50%, -50%) scale(1.09); }
+.film-preview-caption { background: rgba(54, 48, 78, .83); border-radius: 8px; bottom: 16px; color: #fff; font-size: .77rem; font-weight: 800; padding: 8px 12px; position: absolute; right: 16px; }
+.film-showcase-storyboard { background: rgba(255, 255, 255, .65); border: 1px solid var(--line); border-radius: 20px; margin-top: clamp(45px, 6vw, 80px); padding: clamp(18px, 2.5vw, 32px); }
+.film-showcase-heading { align-items: end; display: flex; flex-wrap: wrap; gap: 12px 20px; justify-content: space-between; margin-bottom: 22px; }
+.film-showcase-heading span { color: var(--primary-dark); font-size: .7rem; font-weight: 800; letter-spacing: .14em; }
+.film-showcase-heading h2 { font-size: clamp(1.6rem, 2.5vw, 2.4rem); letter-spacing: -.06em; line-height: 1.2; margin: 3px 0 0; }
+.film-showcase-heading > a { border-bottom: 1px solid var(--primary); color: var(--primary-dark); font-size: .76rem; font-weight: 800; padding-bottom: 4px; }
+.film-scene-list { display: grid; gap: 12px; grid-template-columns: repeat(5, minmax(0, 1fr)); list-style: none; margin: 0; padding: 0; }
+.film-scene-list li { min-width: 0; }
+.film-scene-thumb { aspect-ratio: 6 / 5; background-image: url("../img/undersea-13/storyboard.jpg"); background-repeat: no-repeat; border: 3px solid #fff; border-radius: 10px; box-shadow: 0 7px 18px rgba(59, 45, 117, .12); }
+.film-scene-1, .film-scene-2, .film-scene-3 { background-size: 300% 200%; }
+.film-scene-1 { background-position: 0 0; }
+.film-scene-2 { background-position: 50% 0; }
+.film-scene-3 { background-position: 100% 0; }
+.film-scene-4, .film-scene-5 { background-size: 200% 200%; }
+.film-scene-4 { background-position: 0 100%; }
+.film-scene-5 { background-position: 100% 100%; }
+.film-scene-list li > span { color: var(--ink); display: block; font-size: .73rem; font-weight: 700; line-height: 1.4; padding: 9px 2px 0; word-break: keep-all; }
+.film-project-highlights { margin-top: clamp(18px, 2.6vw, 36px); }
+.film-project-highlights .book-classroom-card { border-top-color: var(--primary); }
+.film-project-highlights .book-classroom-list li::before { background: #D7C8F6; }
+.film-page-body .film-approach { background: #F1EDFC; }
+.film-page-body .film-characters { background: #F1EDFC; }
 
 /* 독립 작품 페이지 */
 .book-page-body {
-  background: #f1eee7;
-  color: #111210;
+  background: var(--paper);
+  color: var(--ink);
   font-family: "Paperlogy", sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -137,86 +183,122 @@
 
 .book-site-header {
   align-items: center;
-  background: #111210;
-  color: white;
+  background: var(--paper);
+  box-shadow: 0 1px 0 var(--line);
+  color: var(--ink);
   display: flex;
   justify-content: space-between;
   min-height: 76px;
   padding: 16px 6vw;
 }
 .book-brand { font-size: 1.3rem; font-weight: 800; letter-spacing: -.08em; white-space: nowrap; }
-.book-brand span { color: #d4ff39; }
-.book-back { border-bottom: 1px solid #d4ff39; color: #d4ff39 !important; font-size: .78rem; font-weight: 700; padding-bottom: 5px; }
-.book-page-body a:focus-visible, .book-page-body summary:focus-visible { outline: 3px solid #6b8a00; outline-offset: 4px; }
+.book-brand span { color: var(--primary); }
+.book-back { border-bottom: 1px solid var(--primary); color: var(--primary-dark) !important; font-size: .78rem; font-weight: 700; padding-bottom: 5px; }
+.book-page-body a:focus-visible, .book-page-body summary:focus-visible { outline: 3px solid var(--primary-dark); outline-offset: 4px; }
 
-.book-detail-hero { background: #111210; color: white; padding: clamp(70px, 11vw, 150px) 7vw 7vw; }
+.book-detail-hero { background: #E8E1FA; color: var(--ink); padding: clamp(70px, 11vw, 150px) 7vw 7vw; }
 .book-detail-hero-inner { margin: auto; max-width: 1440px; }
 .book-detail-hero h1 { font-size: clamp(3.2rem, 8vw, 8.5rem); letter-spacing: -.085em; line-height: 1.05; margin: 18px 0 55px; white-space: normal; }
-.book-detail-hero h1 span { color: #d4ff39; }
+.book-detail-hero h1 span { color: var(--primary-dark); }
 .book-detail-grid { align-items: end; display: grid; gap: clamp(35px, 6vw, 110px); grid-template-columns: minmax(0, 1fr) minmax(260px, .7fr); }
-.book-cover { aspect-ratio: 4 / 5; background: #0a2353; overflow: hidden; position: relative; }
+.book-cover { aspect-ratio: 4 / 5; background: #E8E1FA; overflow: hidden; position: relative; }
 .book-cover img { height: 100%; left: 0; max-width: none; position: absolute; top: 0; width: 200%; }
 .book-intro { padding-bottom: 5px; }
 .book-intro .lead { font-size: clamp(1.25rem, 2vw, 2rem); font-weight: 700; letter-spacing: -.04em; line-height: 1.45; margin: 0 0 22px; word-break: keep-all; }
-.book-intro p:not(.lead) { color: #c8c8c1; font-size: .94rem; max-width: 43ch; }
-.book-facts { border-top: 1px solid #4b4b46; display: grid; gap: 14px; grid-template-columns: 85px 1fr; font-size: .78rem; margin: 38px 0 0; padding-top: 20px; }
-.book-facts dt { color: #9a9a93; }.book-facts dd { margin: 0; }
+.book-intro p:not(.lead) { color: var(--muted); font-size: .94rem; max-width: 43ch; }
+.book-facts { border-top: 1px solid var(--line); display: grid; gap: 14px; grid-template-columns: 85px 1fr; font-size: .78rem; margin: 38px 0 0; padding-top: 20px; }
+.book-facts dt { color: var(--muted); }.book-facts dd { margin: 0; }
+/* 그림책 소개: 기존 색과 타이포그래피를 유지한 책 전시 및 수업 아이디어 */
+.book-detail-hero .book-detail-grid { align-items: center; gap: clamp(24px, 4vw, 75px); grid-template-columns: minmax(280px, .82fr) minmax(0, 1.18fr); }
+.book-project-head { min-width: 0; }
+.book-project-head h1 { font-size: clamp(3.5rem, 6.3vw, 7rem); line-height: 1.06; margin: 23px 0 36px; }
+.book-project-head .book-intro .lead { font-size: clamp(1.25rem, 2vw, 1.85rem); margin-bottom: 16px; }
+.book-project-head .book-intro > p:not(.lead) { line-height: 1.8; }
+.book-project-art { min-height: clamp(390px, 40vw, 575px); position: relative; }
+.book-project-art .book-cover { aspect-ratio: 4 / 5; background: var(--paper); border: 5px solid #fff; border-radius: 7px 12px 12px 7px; box-shadow: 0 22px 50px rgba(33, 26, 48, .24), -9px 7px 0 rgba(26, 42, 77, .65); left: 2%; overflow: hidden; position: absolute; top: 6%; transform: rotate(-6deg); width: 44%; z-index: 2; }
+.book-project-art .book-cover img { height: 100%; left: 0; max-width: none; top: 0; width: 200%; }
+.book-open { aspect-ratio: 8 / 5; background: #fff; border: 5px solid #fff; border-radius: 8px 15px 15px 8px; bottom: 8%; box-shadow: 0 24px 50px rgba(33, 26, 48, .22), 0 8px 0 rgba(255, 255, 255, .72); overflow: hidden; position: absolute; right: 0; transform: rotate(3deg); width: 76%; }
+.book-open img { display: block; height: 100%; object-fit: cover; width: 100%; }
+.book-open::after { background: linear-gradient(90deg, transparent 46%, rgba(37, 30, 50, .18) 49.8%, rgba(255, 255, 255, .65) 50.3%, transparent 54%); content: ""; inset: 0; pointer-events: none; position: absolute; }
+.book-project-highlights { display: grid; gap: clamp(16px, 2.5vw, 32px); grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: clamp(32px, 4vw, 58px); }
+.book-highlight-card { background: rgba(255, 255, 255, .77); border: 1px solid var(--line); border-radius: 20px; min-width: 0; padding: clamp(24px, 3vw, 42px); }
+.book-classroom-card { background: linear-gradient(130deg, rgba(255,255,255,.94), rgba(255,255,255,.66)); border-top: 4px solid var(--mint); }
+.book-highlight-kicker { color: var(--primary-dark); display: block; font-size: .68rem; font-weight: 800; letter-spacing: .14em; }
+.book-project-highlights h2 { font-size: clamp(1.55rem, 2.25vw, 2.35rem); letter-spacing: -.06em; line-height: 1.25; margin: 8px 0 22px; }
+.book-overview-list { margin: 0; }
+.book-overview-list > div { border-top: 1px solid var(--line); display: grid; gap: 16px; grid-template-columns: 64px minmax(0, 1fr); padding: 11px 0; }
+.book-overview-list dt { color: var(--primary-dark); font-size: .84rem; font-weight: 800; }
+.book-overview-list dd { font-size: .9rem; line-height: 1.6; margin: 0; word-break: keep-all; }
+.book-classroom-card > p { color: var(--muted); font-size: .85rem; line-height: 1.65; margin: 0 0 18px; word-break: keep-all; }
+.book-classroom-list { counter-reset: idea; display: grid; gap: 13px; list-style: none; margin: 0; padding: 0; }
+.book-classroom-list li { align-items: start; display: grid; font-size: .92rem; gap: 12px; grid-template-columns: 28px minmax(0, 1fr); line-height: 1.6; word-break: keep-all; }
+.book-classroom-list li::before { background: var(--mint); border-radius: 50%; color: var(--ink); content: counter(idea, decimal-leading-zero); counter-increment: idea; font-size: .62rem; font-weight: 800; height: 28px; line-height: 28px; text-align: center; width: 28px; }
 .book-section { margin: auto; max-width: 1600px; padding: clamp(72px, 10vw, 140px) 7vw; }
-.book-section-heading { border-top: 1px solid #a6a69f; display: grid; gap: 25px; grid-template-columns: 100px 1fr; padding-top: 20px; }
-.book-section-heading > span { color: #777870; font-size: .75rem; font-weight: 800; letter-spacing: .12em; }
+.book-section-heading { border-top: 1px solid var(--line); display: grid; gap: 25px; grid-template-columns: 100px 1fr; padding-top: 20px; }
+.book-section-heading > span { color: var(--primary-dark); font-size: .75rem; font-weight: 800; letter-spacing: .12em; }
 .book-section-heading h2 { font-size: clamp(2.2rem, 5vw, 5.5rem); letter-spacing: -.075em; line-height: 1.06; margin: 4px 0 12px; }
-.book-section-heading p { color: #64655e; font-size: .9rem; margin: 0; }
-.nuri-feature { background: #fff8ef; }
+.book-section-heading p { color: var(--muted); font-size: .9rem; margin: 0; }
+.nuri-feature { background: #FFF9ED; }
 .nuri-feature-intro { display: grid; gap: clamp(28px, 6vw, 100px); grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); margin: clamp(45px, 6vw, 85px) 0 45px 125px; }
-.nuri-feature-lead { border-top: 2px solid #cf5253; padding-top: 16px; }
-.nuri-feature-lead span { color: #b44749; font-size: .72rem; font-weight: 800; letter-spacing: .13em; }
+.nuri-feature-lead { border-top: 2px solid var(--primary); padding-top: 16px; }
+.nuri-feature-lead span { color: var(--primary-dark); font-size: .72rem; font-weight: 800; letter-spacing: .13em; }
 .nuri-feature-lead p { font-size: clamp(1.6rem, 2.5vw, 2.7rem); font-weight: 800; letter-spacing: -.065em; line-height: 1.35; margin: 25px 0 0; word-break: keep-all; }
-.nuri-feature-copy { border-top: 1px solid #d5cbc0; padding-top: 24px; }
-.nuri-feature-copy p { color: #45413d; font-size: clamp(.95rem, 1.15vw, 1.08rem); line-height: 1.85; margin: 0; word-break: keep-all; }
+.nuri-feature-copy { border-top: 1px solid var(--line); padding-top: 24px; }
+.nuri-feature-copy p { color: var(--ink); font-size: clamp(.95rem, 1.15vw, 1.08rem); line-height: 1.85; margin: 0; word-break: keep-all; }
 .nuri-feature-copy p + p { margin-top: 18px; }
 .nuri-feature-sheet { margin: 0; }
 .nuri-feature-sheet a { background: #fff; display: block; overflow: hidden; }
 .nuri-feature-sheet img { height: auto; width: 100%; }
-.nuri-feature-sheet figcaption { border-top: 1px solid #d5cbc0; color: #6f6861; display: flex; flex-wrap: wrap; font-size: .76rem; gap: 8px 25px; justify-content: space-between; padding-top: 14px; }
+.nuri-feature-sheet figcaption { border-top: 1px solid var(--line); color: var(--muted); display: flex; flex-wrap: wrap; font-size: .76rem; gap: 8px 25px; justify-content: space-between; padding-top: 14px; }
 .project-approach { max-width: 1600px; }
-.book-approach { background: #f1eee7; }
-.film-approach { background: #e8f1f3; }
+.book-approach { background: var(--paper); }
+.film-approach { background: #E9F7F3; }
 .project-approach-grid { display: grid; gap: clamp(26px, 4vw, 72px); grid-template-columns: repeat(2, minmax(0, 1fr)); margin: clamp(42px, 6vw, 80px) 0 0 125px; }
-.project-approach-card { border-top: 2px solid #111210; min-width: 0; padding-top: 20px; }
-.project-approach-label { color: #71736d; display: block; font-size: .7rem; font-weight: 800; letter-spacing: .13em; }
+.project-approach-card { border-top: 2px solid var(--primary); min-width: 0; padding-top: 20px; }
+.book-approach .project-approach-card:last-child { grid-column: 1 / -1; }
+.project-approach-label { color: var(--primary-dark); display: block; font-size: .7rem; font-weight: 800; letter-spacing: .13em; }
 .project-approach-card h3 { font-size: clamp(1.6rem, 2.3vw, 2.45rem); letter-spacing: -.065em; line-height: 1.15; margin: 22px 0; }
-.project-approach-card p { color: #41433e; font-size: clamp(.95rem, 1.15vw, 1.08rem); line-height: 1.9; margin: 0; max-width: 48ch; word-break: keep-all; }
-.film-approach .project-approach-card { border-color: #24788c; }
-.film-approach .project-approach-label { color: #387b89; }
-.book-story { background: #e5e2da; }
+.project-approach-card p { color: var(--ink); font-size: clamp(.95rem, 1.15vw, 1.08rem); line-height: 1.9; margin: 0; max-width: 48ch; word-break: keep-all; }
+.film-approach .project-approach-card { border-color: #51A896; }
+.film-approach .project-approach-label { color: var(--primary-dark); }
+.book-story { background: #E8E1FA; }
 .book-story-list { display: grid; gap: clamp(55px, 7vw, 110px); margin-top: 56px; }
 .book-story-item { display: grid; gap: 20px; }
 .book-story-caption { align-items: baseline; display: flex; gap: 30px; }
 .book-story-caption strong { font-size: clamp(1.15rem, 2vw, 1.65rem); letter-spacing: -.04em; }
-.book-story-caption span { color: #696961; font-size: .78rem; }
-.book-spread { background: #d2cfc8; box-shadow: 0 16px 40px rgba(17,18,16,.12); }
+.book-story-caption span { color: var(--muted); font-size: .78rem; }
+.book-spread { background: #FFF9ED; box-shadow: 0 16px 40px rgba(54,48,78,.12); }
 .book-spread > img { width: 100%; }
 .book-mobile-pages { display: none; }
-.book-story-note { color: #65665e; font-size: .8rem; margin: 18px 0 0; }
-.book-characters { background: #f7f6f2; }
+.book-story-note { color: var(--muted); font-size: .8rem; margin: 18px 0 0; }
+.book-characters { background: #FFF9ED; }
 .book-character-grid { display: grid; gap: 42px 24px; grid-template-columns: repeat(2, minmax(0,1fr)); margin-top: 56px; }
 .book-character { margin: 0; min-width: 0; }
 .book-character a { background: #fff; display: block; overflow: hidden; }
 .book-character img { aspect-ratio: 3 / 2; object-fit: contain; width: 100%; }
-.book-character figcaption { align-items: baseline; border-top: 1px solid #bbbcb4; display: flex; gap: 15px; padding-top: 12px; }
+.book-character figcaption { align-items: baseline; border-top: 1px solid var(--line); display: flex; gap: 15px; padding-top: 12px; }
 .book-character figcaption strong { font-size: 1.05rem; }
-.book-character figcaption span { color: #787871; font-size: .75rem; }
-.book-complete { background: #e5e2da; }
-.book-all-details { border-top: 1px solid #a6a69f; margin-top: 50px; }
+.book-character figcaption span { color: var(--muted); font-size: .75rem; }
+.book-complete { background: #E8E1FA; }
+.book-all-details { border-top: 1px solid var(--line); margin-top: 50px; }
 .book-all-details summary { cursor: pointer; font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 800; list-style: none; padding: 25px 40px 25px 0; position: relative; }
 .book-all-details summary::-webkit-details-marker { display: none; }
 .book-all-details summary::after { content: '+'; font-size: 2rem; font-weight: 400; position: absolute; right: 5px; top: 17px; }
 .book-all-details[open] summary::after { content: '−'; }
 .book-all-list { display: grid; gap: 52px; padding: 20px 0 40px; }
 .book-all-list figure { margin: 0; }
-.book-all-list figcaption { color: #686961; font-size: .8rem; margin-bottom: 12px; }
-.book-page-footer { background: #111210; color: #b7b7af; display: flex; flex-wrap: wrap; font-size: .78rem; gap: 20px; justify-content: space-between; padding: 34px 7vw; }
-.book-page-footer a { color: #d4ff39; }
+.book-all-list figcaption { color: var(--muted); font-size: .8rem; margin-bottom: 12px; }
+.book-page-footer { background: #E8E1FA; color: var(--ink); display: flex; flex-wrap: wrap; font-size: .78rem; gap: 20px; justify-content: space-between; padding: 34px 7vw; }
+.book-page-footer a { color: var(--primary-dark); }
+
+@media (min-width: 701px) and (max-width: 1050px) {
+  .book-detail-hero .book-detail-grid { grid-template-columns: minmax(220px, .8fr) minmax(0, 1.2fr); }
+  .book-project-art { min-height: 370px; }
+  .book-project-art .book-cover { width: 48%; }
+  .book-open { width: 77%; }
+  .film-page-body .film-hero-grid { grid-template-columns: 1fr; }
+  .film-page-body .film-hero-art { max-width: 760px; }
+}
 
 @media (max-width: 700px) {
   .book-feature { grid-template-columns: 1fr; }
@@ -227,6 +309,14 @@
   .book-detail-hero { padding: 65px 6vw 70px; }
   .book-detail-hero h1 { font-size: clamp(3rem, 11vw, 5rem); margin-bottom: 40px; }
   .book-detail-grid { grid-template-columns: 1fr; }
+  .book-detail-hero .book-detail-grid { gap: 24px; grid-template-columns: 1fr; }
+  .book-project-head h1 { font-size: clamp(3rem, 11vw, 5rem); margin: 16px 0 26px; }
+  .book-project-art { min-height: 0; padding-bottom: 65%; }
+  .book-project-art .book-cover { border-width: 3px; left: 1%; top: 1%; width: 43%; }
+  .book-open { border-width: 3px; bottom: 4%; width: 76%; }
+  .book-project-highlights { gap: 14px; grid-template-columns: 1fr; margin-top: 32px; }
+  .book-highlight-card { border-radius: 16px; padding: 24px 20px; }
+  .book-project-highlights h2 { margin-bottom: 17px; }
   .book-intro { padding: 0; }
   .book-section { padding: 70px 6vw; }
   .book-section-heading { gap: 10px; grid-template-columns: 1fr; }
@@ -254,9 +344,92 @@
   .film-detail-hero { padding: 65px 6vw 70px; }
   .film-detail-hero h1 { font-size: clamp(3rem, 11vw, 5rem); margin-bottom: 40px; }
   .film-hero-grid { grid-template-columns: 1fr; }
+  .film-page-body .film-detail-hero { padding: 65px 6vw 70px; }
+  .film-page-body .film-hero-grid { gap: 32px; grid-template-columns: 1fr; }
+  .film-page-body .film-detail-hero h1 { font-size: clamp(2.9rem, 10vw, 5rem); margin: 16px 0 24px; }
+  .film-page-body .film-hero-art { border-radius: 14px; }
+  .film-preview-play { height: 58px; width: 58px; }
+  .film-showcase-storyboard { margin-top: 38px; padding: 20px 14px; }
+  .film-scene-list { gap: 12px; grid-auto-columns: minmax(168px, 55%); grid-auto-flow: column; grid-template-columns: none; overflow-x: auto; padding: 0 2px 16px; scroll-snap-type: x mandatory; }
+  .film-scene-list li { scroll-snap-align: start; }
+  .film-project-highlights { margin-top: 16px; }
   .film-player-wrap { margin-top: 38px; padding: 7px; }
   .film-storyboard, .film-character-grid { margin-top: 38px; }
   .film-character-grid { gap: 40px; }
 }
 
 @media (prefers-reduced-motion: reduce) { .book-view-link, .film-feature-art img { transition: none; } }
+
+
+/* Character showcase - underwater */
+.film-page-body .film-characters { background: #F1EDFC; padding: 0; }
+.film-character-intro { background: linear-gradient(180deg, rgba(33, 39, 105, .07), rgba(73, 54, 138, .15)), url("../img/undersea-13/character-underwater-bg.png") center center / cover no-repeat; padding: clamp(65px, 7vw, 105px) 7vw clamp(82px, 8vw, 128px); }
+.film-character-intro-inner, .film-character-study { margin: 0 auto; max-width: 1380px; }
+.film-character-intro-heading { margin-bottom: clamp(30px, 3vw, 48px); text-shadow: 0 2px 14px rgba(37, 32, 94, .35); }
+.film-character-intro-heading > span, .film-character-study-heading > span { font-size: .72rem; font-weight: 800; letter-spacing: .16em; }
+.film-character-intro-heading > span { color: #fff; }
+.film-character-intro-heading h2 { color: #fff; font-size: clamp(2.1rem, 3.9vw, 4rem); letter-spacing: -.06em; line-height: 1.2; margin: 9px 0 15px; }
+.film-character-intro-heading p { color: #fff; font-size: clamp(.88rem, 1.2vw, 1.02rem); line-height: 1.75; margin: 0; }
+.film-character-intro-grid, .film-character-study-grid { display: grid; gap: clamp(13px, 1.5vw, 24px); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.film-character-role { color: #6E58B9; font-size: .68rem; font-weight: 800; letter-spacing: -.01em; }
+.film-character-trait { color: #587F82; font-size: .69rem; font-weight: 800; }
+.film-sheet-crop { aspect-ratio: var(--sheet-ratio, 390/400); display: block; overflow: hidden; position: relative; }
+.film-sheet-crop img { display: block; height: auto; left: var(--sheet-x); max-width: none; position: absolute; top: var(--sheet-y); width: var(--sheet-scale); }
+.film-character-study { padding: clamp(66px, 7vw, 105px) 7vw clamp(82px, 8vw, 120px); }
+.film-character-study-heading { margin-bottom: 26px; }
+.film-character-study-heading > span { color: #7460BD; }
+.film-character-study-heading h3 { font-size: clamp(1.65rem, 2.4vw, 2.5rem); letter-spacing: -.05em; margin: 6px 0; }
+.film-character-study-heading p { color: var(--muted); font-size: .85rem; line-height: 1.7; margin: 0; word-break: keep-all; }
+.film-character-study-card { background: #fff; border: 1px solid #E4DDF7; border-radius: 18px; box-shadow: 0 12px 24px rgba(73, 55, 136, .08); margin: 0; min-width: 0; overflow: hidden; padding: clamp(12px, 1.7vw, 24px); }
+.film-character-study-card > a { background: #FDF9F5; border-radius: 10px; }
+.film-character-turnarounds .film-character-study-card { display: flex; flex-direction: column; justify-content: space-between; }
+.film-character-turnarounds .film-character-study-card > a { margin: auto 0; }
+.film-character-study-card figcaption { align-items: baseline; display: flex; gap: 9px; margin-top: 18px; }
+.film-character-study-card figcaption strong { color: #59439B; font-size: 1rem; }
+.film-character-study-card figcaption span { color: #716B84; font-size: .75rem; }
+.film-character-study-heading--expressions { margin-top: clamp(45px, 5vw, 75px); }
+.film-character-expressions .film-character-study-card > a { margin: 12px 0; }
+.film-character-sheet-note { color: #746D8A; font-size: .72rem; margin: 28px 0 0; text-align: right; }
+@media (min-width: 701px) and (max-width: 1180px) {
+  .film-character-intro-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .film-character-intro { background-position: center center; padding: 65px 6vw 85px; }
+  .film-character-intro-grid, .film-character-study-grid { gap: 14px; grid-template-columns: 1fr; }
+  .film-character-study { padding: 70px 6vw 85px; }
+  .film-character-study-card { padding: 18px; }
+  .film-character-turnarounds .film-character-study-card > a { max-height: 240px; }
+}
+
+
+/* Large freeform film characters */
+.film-character-intro-grid { align-items: end; gap: clamp(8px, 1.5vw, 24px); }
+.film-character-feature { isolation: isolate; min-height: clamp(400px, 34vw, 490px); position: relative; }
+.film-character-feature-art { align-items: flex-end; bottom: 28px; display: flex; justify-content: flex-start; left: -1%; position: absolute; top: 0; width: 69%; z-index: 2; }
+.film-character-feature-art img { filter: drop-shadow(2px 0 0 rgba(255, 255, 255, .98)) drop-shadow(-2px 0 0 rgba(255, 255, 255, .98)) drop-shadow(0 2px 0 rgba(255, 255, 255, .98)) drop-shadow(0 -2px 0 rgba(255, 255, 255, .98)) drop-shadow(0 0 13px rgba(229, 251, 255, .85)) drop-shadow(0 20px 15px rgba(18, 35, 98, .28)); height: 100%; max-height: 430px; object-fit: contain; object-position: center bottom; width: 100%; }
+.film-character-feature--naru .film-character-feature-art { bottom: 6px; left: 1%; top: 8px; width: 69%; }
+.film-character-feature--ttori .film-character-feature-art { bottom: 70px; left: -2%; top: 30px; width: 55%; transform: rotate(-5deg); }
+.film-character-feature--kuu .film-character-feature-art { bottom: 56px; left: -3%; top: 10px; width: 55%; transform: rotate(-7deg); }
+.film-character-feature-copy { background: rgba(255, 255, 255, .88); border: 1px solid rgba(255, 255, 255, .72); border-radius: 24px; bottom: 22px; box-shadow: 0 18px 35px rgba(33, 42, 108, .17); min-height: 215px; padding: clamp(20px, 2vw, 29px) clamp(14px, 1.55vw, 24px) clamp(20px, 2vw, 29px) 27%; position: absolute; right: 0; width: 68%; z-index: 1; }
+.film-character-feature--ttori .film-character-feature-copy, .film-character-feature--kuu .film-character-feature-copy { padding-left: 32%; }
+.film-character-feature .film-character-role { color: #55429B; font-size: .7rem; }
+.film-character-feature h3 { color: #29294E; font-size: clamp(1.65rem, 2.1vw, 2.4rem); line-height: 1.1; margin: 8px 0 12px; }
+.film-character-feature h3 small { color: #8A7FAA; font-size: .48em; letter-spacing: .035em; white-space: nowrap; }
+.film-character-feature p { color: #383653; font-size: clamp(.73rem, .9vw, .88rem); line-height: 1.7; margin: 0 0 13px; word-break: keep-all; }
+.film-character-feature .film-character-trait { color: #487F83; font-size: .72rem; }
+@media (min-width: 701px) and (max-width: 1600px) {
+  .film-character-intro-grid { gap: 15px; grid-template-columns: 1fr; }
+  .film-character-feature { min-height: 335px; }
+  .film-character-feature-art, .film-character-feature--naru .film-character-feature-art { bottom: 0; left: 8%; top: 0; width: 42%; }
+  .film-character-feature--ttori .film-character-feature-art, .film-character-feature--kuu .film-character-feature-art { bottom: 15px; left: 5%; top: 0; width: 50%; }
+  .film-character-feature-copy, .film-character-feature--ttori .film-character-feature-copy, .film-character-feature--kuu .film-character-feature-copy { bottom: 50px; min-height: 210px; padding: 24px 35px 24px 27%; right: 4%; width: 64%; }
+}
+@media (max-width: 700px) {
+  .film-character-intro-grid { gap: 30px; grid-template-columns: 1fr; }
+  .film-character-feature { min-height: 470px; }
+  .film-character-feature-art, .film-character-feature--naru .film-character-feature-art { bottom: auto; height: 250px; left: -4%; top: 0; width: 80%; }
+  .film-character-feature--ttori .film-character-feature-art, .film-character-feature--kuu .film-character-feature-art { bottom: auto; height: 250px; left: -7%; top: 0; width: 88%; }
+  .film-character-feature-copy, .film-character-feature--ttori .film-character-feature-copy, .film-character-feature--kuu .film-character-feature-copy { bottom: 0; min-height: 180px; padding: 20px 23px; right: 0; width: 82%; }
+  .film-character-feature h3 { font-size: clamp(1.55rem, 6vw, 2.1rem); }
+  .film-character-feature p { font-size: .76rem; }
+}
