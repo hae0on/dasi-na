@@ -7,7 +7,7 @@
   <title>바닷속 13층 | 박성효 포트폴리오</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/subsets/Paperlogy-dynamic-subset.css">
-  <link rel="stylesheet" href="public/css/book-project.css">
+  <link rel="stylesheet" href="public/css/book-project.css?v=19">
   <link rel="stylesheet" href="public/css/cursor.css">
 </head>
 <body class="book-page-body film-page-body">
@@ -15,16 +15,54 @@
   <main>
     <section class="film-detail-hero" aria-labelledby="film-title">
       <div class="film-detail-inner">
-        <p class="book-kicker">SELECTED WORK 02 / AI SHORT FILM</p>
-        <h1 id="film-title">바닷속 <span>13층</span></h1>
         <div class="film-hero-grid">
-          <div class="film-hero-art"><img src="public/img/undersea-13/hero.png" alt="나루, 또리, 쿠우가 바닷속 엘리베이터에서 만나는 콘셉트 장면" fetchpriority="high"></div>
           <div class="film-hero-copy">
+            <p class="book-kicker">SELECTED WORK 02 / AI SHORT FILM</p>
+            <h1 id="film-title">바닷속 <span>13층</span></h1>
             <p class="lead">엘리베이터 문이 열리자,<br>바닷속의 새로운 친구들이 기다리고 있었어요.</p>
             <p>나루가 또리와 쿠우를 만나 바닷속 13층으로 향하는 29초짜리 세로형 AI 영상입니다. 장면의 흐름과 캐릭터의 표정, 바다의 색감을 하나의 짧은 모험으로 엮었습니다.</p>
-            <dl class="book-facts"><dt>형식</dt><dd>세로형 영상 · 29초 · 9:16</dd><dt>제작 도구</dt><dd>Google Flow</dd><dt>구성</dt><dd>영상 · 스토리보드 · 캐릭터 시트</dd></dl>
             <a class="film-jump" href="#watch">영상 보기 <span aria-hidden="true">↓</span></a>
           </div>
+          <a class="film-hero-art" href="#watch" aria-label="바닷속 13층 완성 영상으로 이동">
+            <img src="public/img/undersea-13/hero.png" alt="나루와 또리가 바닷속 엘리베이터에서 고래 쿠우를 만나는 장면" fetchpriority="high">
+            <span class="film-preview-play" aria-hidden="true">▶</span>
+            <span class="film-preview-caption">완성 영상 보기 <span aria-hidden="true">↗</span></span>
+          </a>
+        </div>
+        <div class="film-showcase-storyboard">
+          <div class="film-showcase-heading">
+            <div><span>STORYBOARD</span><h2>장면의 흐름</h2></div>
+            <a href="public/img/undersea-13/storyboard.jpg" target="_blank" rel="noopener" aria-label="바닷속 13층 스토리보드 원본 크게 보기 (새 창)">스토리보드 크게 보기 ↗</a>
+          </div>
+          <ol class="film-scene-list" aria-label="다섯 장면으로 보는 이야기의 흐름">
+            <li><div class="film-scene-thumb film-scene-1" aria-hidden="true"></div><span>13층 버튼을 발견하다</span></li>
+            <li><div class="film-scene-thumb film-scene-2" aria-hidden="true"></div><span>바다로 내려가다</span></li>
+            <li><div class="film-scene-thumb film-scene-3" aria-hidden="true"></div><span>커다란 그림자를 만나다</span></li>
+            <li><div class="film-scene-thumb film-scene-4" aria-hidden="true"></div><span>쿠우와 인사하다</span></li>
+            <li><div class="film-scene-thumb film-scene-5" aria-hidden="true"></div><span>또리와 함께 출발하다</span></li>
+          </ol>
+        </div>
+        <div class="book-project-highlights film-project-highlights">
+          <section class="book-highlight-card" aria-labelledby="film-overview-title">
+            <span class="book-highlight-kicker">ABOUT THE PROJECT</span>
+            <h2 id="film-overview-title">프로젝트 개요</h2>
+            <dl class="book-overview-list">
+              <div><dt>주제</dt><dd>평범한 엘리베이터에서 시작되는 바닷속 모험</dd></div>
+              <div><dt>형식</dt><dd>어린이를 위한 AI 영상 · 29초 · 세로형 9:16</dd></div>
+              <div><dt>제작 도구</dt><dd>Google Flow</dd></div>
+              <div><dt>작업</dt><dd>이야기 기획 · 캐릭터 디자인 · 스토리보드 · 영상 구성</dd></div>
+            </dl>
+          </section>
+          <section class="book-highlight-card book-classroom-card" aria-labelledby="film-classroom-title">
+            <span class="book-highlight-kicker">CLASSROOM IDEAS</span>
+            <h2 id="film-classroom-title">교육 활용 아이디어</h2>
+            <p>아이들이 먼저 상상하고, AI 영상을 보며 자신의 이야기를 발전시키는 활동입니다.</p>
+            <ol class="book-classroom-list">
+              <li>엘리베이터가 멈출 새로운 층과 바다 친구 상상하기</li>
+              <li>장면을 그림으로 그려 시작·중간·끝 스토리보드 만들기</li>
+              <li>AI로 구현한 영상과 비교하며 표정과 움직임 다듬기</li>
+            </ol>
+          </section>
         </div>
       </div>
     </section>
@@ -40,16 +78,40 @@
       <div class="film-player-wrap"><video controls playsinline preload="metadata" poster="public/img/undersea-13/video-poster.jpg" aria-label="바닷속 13층 완성 영상, 약 29초"><source src="public/video/undersea-13.mp4" type="video/mp4">이 브라우저에서 영상을 재생할 수 없습니다. <a href="public/video/undersea-13.mp4">영상 파일 열기</a></video></div>
       <p class="film-player-note">AI 영상 제작 · Google Flow</p>
     </section>
-    <section class="book-section film-process" aria-labelledby="process-title">
-      <div class="book-section-heading"><span>03 / STORY</span><div><h2 id="process-title">장면 구성</h2><p>엘리베이터의 발견에서 바닷속 친구들과의 만남까지, 짧은 영상의 흐름을 정리했습니다.</p></div></div>
-      <figure class="film-storyboard"><a href="public/img/undersea-13/storyboard.jpg" target="_blank" rel="noopener" aria-label="바닷속 13층 스토리보드 크게 보기"><img src="public/img/undersea-13/storyboard.jpg" alt="바닷속 13층 스토리보드. 엘리베이터 버튼, 나루의 발견, 고래 쿠우와 거북이 또리의 등장" loading="lazy"></a><figcaption>스토리보드 · 바닷속 13층으로 향하는 여정</figcaption></figure>
-    </section>
     <section class="book-section film-characters" aria-labelledby="film-characters-title">
-      <div class="book-section-heading"><span>04 / CHARACTERS</span><div><h2 id="film-characters-title">세 친구의 디자인</h2><p>각 캐릭터의 전신, 표정, 움직임과 컬러를 정리한 시트입니다. 이미지를 누르면 크게 볼 수 있습니다.</p></div></div>
-      <div class="film-character-grid">
-        <figure><a href="public/img/undersea-13/naru-sheet.png" target="_blank" rel="noopener" aria-label="나루 캐릭터 시트 크게 보기"><img src="public/img/undersea-13/naru-sheet.png" alt="노란 후드와 파란 가방을 멘 나루의 전신·표정·장면별 행동 시트" loading="lazy"></a><figcaption><strong>나루</strong><span>새로운 곳을 발견하는 아이</span></figcaption></figure>
-        <figure><a href="public/img/undersea-13/ttori-sheet.png" target="_blank" rel="noopener" aria-label="또리 캐릭터 시트 크게 보기"><img src="public/img/undersea-13/ttori-sheet.png" alt="초록색 아기 바다거북 또리의 전신·표정·헤엄치는 동작 시트" loading="lazy"></a><figcaption><strong>또리</strong><span>나루와 함께 헤엄치는 바다거북</span></figcaption></figure>
-        <figure><a href="public/img/undersea-13/kuu-sheet.png" target="_blank" rel="noopener" aria-label="쿠우 캐릭터 시트 크게 보기"><img src="public/img/undersea-13/kuu-sheet.png" alt="분홍빛 고래 쿠우의 전신·표정·바닷속 장면 시트" loading="lazy"></a><figcaption><strong>쿠우</strong><span>바다에서 만난 다정한 고래</span></figcaption></figure>
+      <div class="film-character-intro">
+        <div class="film-character-intro-inner">
+          <div class="film-character-intro-heading"><span>03 / CHARACTERS</span><h2 id="film-characters-title">바닷속 13층에서 만난 친구들</h2><p>호기심 많은 나루와 다정한 바다 친구들. 각자의 성격과 이야기가 한 장면 안에서 만납니다.</p></div>
+          <div class="film-character-intro-grid">
+            <article class="film-character-feature film-character-feature--naru">
+              <div class="film-character-feature-art"><img src="public/img/undersea-13/naru-freeform.png" alt="노란 후드티와 청바지를 입고 파란 배낭을 멘 주인공 나루의 전신" loading="lazy"></div>
+              <div class="film-character-feature-copy"><span class="film-character-role">주인공 · 8살</span><h3>나루 <small>NARU</small></h3><p>새로운 곳을 탐험하고 동물 친구들을 만나는 걸 좋아하는 밝고 씩씩한 아이예요.</p><span class="film-character-trait">호기심 · 모험 · 발견</span></div>
+            </article>
+            <article class="film-character-feature film-character-feature--ttori">
+              <div class="film-character-feature-art"><img src="public/img/undersea-13/ttori-freeform.png" alt="초록색 등껍질과 큰 눈을 가진 아기 바다거북 또리가 헤엄치는 모습" loading="lazy"></div>
+              <div class="film-character-feature-copy"><span class="film-character-role">바다 친구 · 아기 거북</span><h3>또리 <small>TTORI</small></h3><p>활발하고 다정한 아기 바다거북. 나루와 함께 새 친구를 만나러 헤엄쳐요.</p><span class="film-character-trait">활발함 · 친절 · 호기심</span></div>
+            </article>
+            <article class="film-character-feature film-character-feature--kuu">
+              <div class="film-character-feature-art"><img src="public/img/undersea-13/kuu-freeform.png" alt="분홍빛 몸과 흰 배를 가진 고래 쿠우가 활짝 웃으며 헤엄치는 모습" loading="lazy"></div>
+              <div class="film-character-feature-copy"><span class="film-character-role">바다 친구 · 혹등고래</span><h3>쿠우 <small>KUU</small></h3><p>온순하고 든든한 바다 친구. 나루의 모험을 곁에서 응원하고 함께 노래해요.</p><span class="film-character-trait">다정함 · 노래 · 바다</span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="film-character-study">
+        <div class="film-character-study-heading"><span>DESIGN STUDY 01</span><h3>전신 턴어라운드</h3><p>정면에서 뒷모습까지, 세 친구가 장면마다 같은 모습으로 등장하도록 여러 방향에서 디자인했습니다.</p></div>
+        <div class="film-character-study-grid film-character-turnarounds">
+          <figure class="film-character-study-card"><a class="film-sheet-crop" style="--sheet-scale:255.6%;--sheet-x:-105.7%;--sheet-y:-10.7%;--sheet-ratio:600/420" href="public/img/undersea-13/naru-sheet.png" target="_blank" rel="noopener" aria-label="나루 전신 턴어라운드 크게 보기"><img src="public/img/undersea-13/naru-sheet.png" alt="나루의 정면, 45도, 측면, 후면 전신" loading="lazy"></a><figcaption><strong>나루</strong><span>전신 턴어라운드</span></figcaption></figure>
+          <figure class="film-character-study-card"><a class="film-sheet-crop" style="--sheet-scale:187.1%;--sheet-x:-86.1%;--sheet-y:-17.4%;--sheet-ratio:821/287" href="public/img/undersea-13/ttori-sheet.png" target="_blank" rel="noopener" aria-label="또리 전신 턴어라운드 크게 보기"><img src="public/img/undersea-13/ttori-sheet.png" alt="또리의 정면, 45도, 측면, 후면 전신" loading="lazy"></a><figcaption><strong>또리</strong><span>전신 턴어라운드</span></figcaption></figure>
+          <figure class="film-character-study-card"><a class="film-sheet-crop" style="--sheet-scale:187.3%;--sheet-x:-86.4%;--sheet-y:-17.4%;--sheet-ratio:820/287" href="public/img/undersea-13/kuu-sheet.png" target="_blank" rel="noopener" aria-label="쿠우 전신 턴어라운드 크게 보기"><img src="public/img/undersea-13/kuu-sheet.png" alt="쿠우의 정면, 45도, 측면, 후면 전신" loading="lazy"></a><figcaption><strong>쿠우</strong><span>전신 턴어라운드</span></figcaption></figure>
+        </div>
+        <div class="film-character-study-heading film-character-study-heading--expressions"><span>DESIGN STUDY 02</span><h3>다양한 표정</h3><p>같은 순간에도 각기 다른 반응을 보이는 캐릭터의 감정을 살펴보세요.</p></div>
+        <div class="film-character-study-grid film-character-expressions">
+          <figure class="film-character-study-card"><a class="film-sheet-crop" style="--sheet-scale:119.4%;--sheet-x:-18.1%;--sheet-y:-183.9%;--sheet-ratio:1286/260" href="public/img/undersea-13/naru-sheet.png" target="_blank" rel="noopener" aria-label="나루의 다양한 표정 크게 보기"><img src="public/img/undersea-13/naru-sheet.png" alt="나루의 미소, 신남, 놀람, 호기심, 발견, 감동 등 다양한 표정" loading="lazy"></a><figcaption><strong>나루</strong><span>다양한 표정</span></figcaption></figure>
+          <figure class="film-character-study-card"><a class="film-sheet-crop" style="--sheet-scale:137.4%;--sheet-x:-36.9%;--sheet-y:-156.4%;--sheet-ratio:1118/215" href="public/img/undersea-13/ttori-sheet.png" target="_blank" rel="noopener" aria-label="또리의 다양한 표정 크게 보기"><img src="public/img/undersea-13/ttori-sheet.png" alt="또리의 미소, 신남, 호기심, 놀람, 윙크 등 다양한 표정" loading="lazy"></a><figcaption><strong>또리</strong><span>다양한 표정</span></figcaption></figure>
+          <figure class="film-character-study-card"><a class="film-sheet-crop" style="--sheet-scale:135.9%;--sheet-x:-35.2%;--sheet-y:-159.1%;--sheet-ratio:1130/220" href="public/img/undersea-13/kuu-sheet.png" target="_blank" rel="noopener" aria-label="쿠우의 다양한 표정 크게 보기"><img src="public/img/undersea-13/kuu-sheet.png" alt="쿠우의 미소, 신남, 다정함, 놀람 등 다양한 표정" loading="lazy"></a><figcaption><strong>쿠우</strong><span>다양한 표정</span></figcaption></figure>
+        </div>
+        <p class="film-character-sheet-note">각 이미지를 누르면 원본 캐릭터 디자인 시트를 크게 볼 수 있습니다.</p>
       </div>
     </section>
   </main>
