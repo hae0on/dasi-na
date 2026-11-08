@@ -1,66 +1,72 @@
-/* Text-only portfolio entry cards. Keep the original black / neon palette. */
-.works { background: #111210; color: #fff; }
-.works .section-heading { border-bottom: 1px solid rgba(255, 255, 255, .15); padding-bottom: 30px; }
-.works .section-no, .works .eyebrow { color: #d4ff39; }
-.works .section-heading h2 { color: #fff; }
-.works-card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(12px, 1.6vw, 24px);
-  border: 0;
-  min-height: 0;
+:root {
+  --ink: #111210;
+  --paper: #111210;
+  --line: rgba(255, 255, 255, .18);
+  --lime: #d4ff39;
+  --primary: #d4ff39;
+  --primary-dark: #d4ff39;
+  --mint: #d4ff39;
+  --sun: #d4ff39;
+  --muted: #bcbcb5;
 }
-.work-title-card {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  min-width: 0;
-  min-height: clamp(310px, 34vw, 510px);
-  padding: clamp(24px, 3vw, 46px);
-  border: 1px solid rgba(255,255,255,.09);
-  border-radius: 18px;
-  background: #20211f;
+
+body,
+.site-header,
+.hero,
+.statement,
+.career,
+.numbers,
+.education,
+.works,
+footer {
+  background: #111210;
   color: #fff;
-  text-decoration: none;
-  overflow: hidden;
-  transition: background-color .28s ease, color .28s ease, border-color .28s ease, transform .28s ease;
 }
-.work-title-card h3 {
-  margin: 0;
-  font-size: clamp(1.7rem, 2.7vw, 3.4rem);
-  font-weight: 800;
-  line-height: 1.22;
-  letter-spacing: -.055em;
-  word-break: keep-all;
+
+.site-header nav a { color: #deded7; }
+
+.site-header nav a:hover,
+.header-contact,
+.brand span,
+.hero .eyebrow,
+.hero h1 em,
+.scroll-link,
+.numbers strong {
+  color: #d4ff39;
 }
-.work-card-arrow {
-  position: absolute;
-  right: clamp(23px, 3vw, 45px);
-  top: clamp(19px, 2.6vw, 37px);
-  font-size: clamp(1.5rem, 2.2vw, 2.6rem);
-  line-height: 1;
-  transition: transform .28s ease;
+
+.header-contact { border-color: #d4ff39; }
+
+.hero-kicker,
+.numbers p { color: #c8c8c1; }
+
+.hero::before {
+  background: radial-gradient(
+    circle,
+    rgba(212, 255, 57, .18) 0 1px,
+    transparent 1.5px
+  ) 0 0 / 18px 18px;
 }
-.work-title-card:hover,
-.work-title-card:focus-visible {
-  background: #d4ff39;
-  border-color: #d4ff39;
+
+.hero-orbit { border-color: rgba(255, 255, 255, .2); }
+.orbit-two { border-color: rgba(212, 255, 57, .46); }
+.motion-dot { box-shadow: 0 0 0 8px rgba(212, 255, 57, .12); }
+
+.text-link { color: #d4ff39; border-color: #d4ff39; }
+.career-item:hover { background: #d4ff39; color: #111210; }
+
+.career-item:hover .career-role,
+.career-item:hover .career-number { color: #435600; }
+
+.numbers div { border-color: rgba(255, 255, 255, .25); }
+
+.skills {
   color: #111210;
-  transform: translateY(-6px);
+  --line: rgba(17, 18, 16, .22);
+  --muted: #5f605a;
 }
-.work-title-card:hover .work-card-arrow,
-.work-title-card:focus-visible .work-card-arrow { transform: translate(4px, -4px); }
-.work-title-card:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
-@media (max-width: 900px) {
-  .works-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .work-title-card { min-height: 290px; }
-}
-@media (max-width: 600px) {
-  .works-card-grid { grid-template-columns: 1fr; }
-  .work-title-card { min-height: 220px; padding: 27px; }
-  .work-title-card h3 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
-  .work-card-arrow { top: 25px; right: 26px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .work-title-card, .work-card-arrow { transition: none; }
-}
+
+.contact { color: #111210; }
+.contact .eyebrow { color: #111210; }
+.contact-button { background: #111210; color: #fff; }
+footer p { color: #aaa; }
