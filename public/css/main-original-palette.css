@@ -1,0 +1,51 @@
+/* Main portfolio palette restored to the original black and neon green. */
+:root {
+  --ink: #111210;
+  --paper: #f1eee7;
+  --line: rgba(17, 18, 16, .22);
+  --lime: #d4ff39;
+  --primary: #d4ff39;
+  --primary-dark: #435600;
+  --mint: #d4ff39;
+  --sun: #d4ff39;
+  --muted: #787871;
+}
+
+.site-header { background: var(--ink); box-shadow: none; color: #fff; }
+.site-header nav a { color: #cacac5; }
+.site-header nav a:hover, .header-contact { color: var(--lime); }
+.header-contact { border-color: var(--lime); }
+.brand span { color: var(--lime); }
+
+.hero { background: var(--ink); color: #fff; }
+.hero::before { background: radial-gradient(circle, rgba(212, 255, 57, .18) 0 1px, transparent 1.5px) 0 0 / 18px 18px; }
+.hero .eyebrow, .scroll-link { color: var(--lime); }
+.hero-kicker { color: #c8c8c1; }
+.hero h1 em { color: var(--lime); }
+.hero-orbit { border-color: rgba(255, 255, 255, .2); }
+.orbit-two { border-color: rgba(212, 255, 57, .46); }
+.motion-dot { box-shadow: 0 0 0 8px rgba(212, 255, 57, .12); }
+.orbit-label { color: #c8c8c1; }
+
+.career { background: #dbd8cf; }
+.career-item:hover { background: var(--lime); }
+.numbers { background: var(--ink); color: #fff; }
+.numbers div { border-color: #484843; }
+.numbers strong { color: var(--lime); }
+.numbers p { color: #bbbcb4; }
+.skills { background: #f7f6f2; }
+.skill-grid p { color: #5f605a; }
+.works { background: #e5e2da; }
+.book-feature, .film-feature, .book-feature-art { background: #e5e2da; }
+.contact { background: var(--lime); }
+.contact-button span { color: var(--lime); }
+footer { background: var(--ink); color: #fff; }
+footer p { color: #999991; }
+
+.cursor-dot { background: var(--lime); border-color: var(--ink); }
+.cursor-ring { border-color: var(--lime); box-shadow: none; }
+.cursor-ring.is-active { background-color: rgba(212, 255, 57, .28); }
+
+@media (max-width: 700px) {
+  .numbers div, .numbers div:first-child { border-top-color: #484843; }
+}
