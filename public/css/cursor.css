@@ -25,8 +25,8 @@
 }
 
 .cursor-dot {
-  background: #d4ff39;
-  border: 1px solid #111210;
+  background: #36304E;
+  border: 1px solid #F8F6FF;
   border-radius: 50%;
   display: block;
   height: 8px;
@@ -37,7 +37,8 @@
 }
 
 .cursor-ring {
-  border: 2px solid #d4ff39;
+  border: 2px solid #8871D8;
+  box-shadow: 0 0 0 1px rgba(248, 246, 255, .9);
   border-radius: 50%;
   display: block;
   height: 32px;
@@ -49,7 +50,7 @@
 }
 
 .cursor-ring.is-active {
-  background-color: rgba(212, 255, 57, .28);
+  background-color: rgba(136, 113, 216, .24);
   height: 54px;
   left: -27px;
   top: -27px;
