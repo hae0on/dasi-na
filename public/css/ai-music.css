@@ -1,0 +1,144 @@
+.ai-music-hero {
+  padding: clamp(80px, 11vw, 150px) 7vw;
+  background: var(--ink);
+  color: #fff;
+}
+
+.ai-music-hero .eyebrow {
+  margin-bottom: 28px;
+  color: var(--lime);
+}
+
+.ai-music-hero h1 {
+  font-size: clamp(4rem, 10vw, 10rem);
+}
+
+.ai-music-hero h1 em {
+  color: var(--lime);
+  font-style: normal;
+}
+
+.ai-music-hero > p:last-child {
+  max-width: 560px;
+  margin-top: 36px;
+  color: #c8c8c1;
+  font-size: clamp(.95rem, 1.4vw, 1.1rem);
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+.ai-music-content {
+  padding: clamp(70px, 9vw, 130px) 7vw;
+}
+
+.music-project {
+  max-width: 1100px;
+  margin: 0 auto 90px;
+  padding-bottom: 90px;
+  border-bottom: 1px solid var(--line);
+}
+
+.music-project__heading {
+  margin-bottom: 55px;
+}
+
+.music-project__heading .eyebrow {
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+.music-project__heading h2 {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  line-height: 1.1;
+  word-break: keep-all;
+}
+
+.music-project__section {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 24px;
+  margin: 36px 0;
+}
+
+.music-project__section h3 {
+  font-size: .9rem;
+}
+
+.music-project__section > p,
+.music-project__lyrics {
+  max-width: 720px;
+  color: #4c4d47;
+  line-height: 1.9;
+  word-break: keep-all;
+}
+
+.music-project__lyrics p + p {
+  margin-top: 24px;
+}
+
+.music-project__listen {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  min-height: 54px;
+  margin-top: 32px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--lime);
+  font-weight: 700;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.music-project__listen:hover,
+.music-project__listen:focus-visible {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.music-project__listen:focus-visible,
+.ai-music-back:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.ai-music-back {
+  display: inline-block;
+  font-weight: 700;
+  border-bottom: 1px solid currentColor;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .music-project {
+    margin-bottom: 65px;
+    padding-bottom: 65px;
+  }
+
+  .music-project__section {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .music-project__listen {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .music-project__listen {
+    transition: none;
+  }
+}
