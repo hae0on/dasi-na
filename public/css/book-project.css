@@ -133,7 +133,7 @@
 .film-character-grid figcaption span { color: var(--muted); font-size: .78rem; }
 
 /* 바닷속 13층: 라벤더 시안 전용 쇼케이스 */
-.film-page-body .film-detail-hero { background: url("../img/undersea-13/decor-overlay.png") center top / 100% auto no-repeat, linear-gradient(145deg, #EEE5FC 0%, #E7E3FA 52%, #DADFFA 100%); }
+.film-page-body .film-detail-hero { background: none center top / 100% auto no-repeat, linear-gradient(145deg, #EEE5FC 0%, #E7E3FA 52%, #DADFFA 100%); }
 .film-page-body .film-hero-grid { align-items: center; gap: clamp(26px, 4.5vw, 76px); grid-template-columns: minmax(300px, .85fr) minmax(0, 1.15fr); }
 .film-page-body .film-hero-copy .book-kicker { color: var(--primary-dark); }
 .film-page-body .film-detail-hero h1 { font-size: clamp(3.15rem, 5.4vw, 6.5rem); line-height: 1.08; margin: 24px 0 28px; }
@@ -152,7 +152,7 @@
 .film-showcase-heading > a { border-bottom: 1px solid var(--primary); color: var(--primary-dark); font-size: .76rem; font-weight: 800; padding-bottom: 4px; }
 .film-scene-list { display: grid; gap: 12px; grid-template-columns: repeat(5, minmax(0, 1fr)); list-style: none; margin: 0; padding: 0; }
 .film-scene-list li { min-width: 0; }
-.film-scene-thumb { aspect-ratio: 6 / 5; background-image: url("../img/undersea-13/storyboard.jpg"); background-repeat: no-repeat; border: 3px solid #fff; border-radius: 10px; box-shadow: 0 7px 18px rgba(59, 45, 117, .12); }
+.film-scene-thumb { aspect-ratio: 6 / 5; background-image: none; background-repeat: no-repeat; border: 3px solid #fff; border-radius: 10px; box-shadow: 0 7px 18px rgba(59, 45, 117, .12); }
 .film-scene-1, .film-scene-2, .film-scene-3 { background-size: 300% 200%; }
 .film-scene-1 { background-position: 0 0; }
 .film-scene-2 { background-position: 50% 0; }
@@ -285,8 +285,8 @@
 .book-all-details summary::-webkit-details-marker { display: none; }
 .book-all-details summary::after { content: '+'; font-size: 2rem; font-weight: 400; position: absolute; right: 5px; top: 17px; }
 .book-all-details[open] summary::after { content: '−'; }
-.book-all-list { display: grid; gap: 52px; padding: 20px 0 40px; }
-.book-all-list figure { margin: 0; }
+.book-all-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 2.4vw, 32px); padding: 20px 0 40px; }
+.book-all-list figure { margin: 0; min-width: 0; }
 .book-all-list figcaption { color: var(--muted); font-size: .8rem; margin-bottom: 12px; }
 .book-page-footer { background: #E8E1FA; color: var(--ink); display: flex; flex-wrap: wrap; font-size: .78rem; gap: 20px; justify-content: space-between; padding: 34px 7vw; }
 .book-page-footer a { color: var(--primary-dark); }
@@ -336,7 +336,9 @@
   .book-half:first-child img { left: 0; }
   .book-half:last-child img { right: 0; }
   .book-character-grid { grid-template-columns: 1fr; }
-  .book-all-list { gap: 44px; }
+  .book-all-list { grid-template-columns: 1fr; gap: 24px; }
+  .book-all-list .book-spread > img { display: block; }
+  .book-all-list .book-mobile-pages { display: none; }
   .film-feature { grid-template-columns: 1fr; }
   .film-feature-art { aspect-ratio: 4 / 3; min-height: 0; }
   .film-feature-copy { padding: 36px 6vw 45px; }
@@ -363,7 +365,7 @@
 
 /* Character showcase - underwater */
 .film-page-body .film-characters { background: #F1EDFC; padding: 0; }
-.film-character-intro { background: linear-gradient(180deg, rgba(33, 39, 105, .07), rgba(73, 54, 138, .15)), url("../img/undersea-13/character-underwater-bg.png") center center / cover no-repeat; padding: clamp(65px, 7vw, 105px) 7vw clamp(82px, 8vw, 128px); }
+.film-character-intro { background: linear-gradient(180deg, rgba(33, 39, 105, .07), rgba(73, 54, 138, .15)), none center center / cover no-repeat; padding: clamp(65px, 7vw, 105px) 7vw clamp(82px, 8vw, 128px); }
 .film-character-intro-inner, .film-character-study { margin: 0 auto; max-width: 1380px; }
 .film-character-intro-heading { margin-bottom: clamp(30px, 3vw, 48px); text-shadow: 0 2px 14px rgba(37, 32, 94, .35); }
 .film-character-intro-heading > span, .film-character-study-heading > span { font-size: .72rem; font-weight: 800; letter-spacing: .16em; }
@@ -408,28 +410,27 @@
 .film-character-feature-art { align-items: flex-end; bottom: 28px; display: flex; justify-content: flex-start; left: -1%; position: absolute; top: 0; width: 69%; z-index: 2; }
 .film-character-feature-art img { filter: drop-shadow(2px 0 0 rgba(255, 255, 255, .98)) drop-shadow(-2px 0 0 rgba(255, 255, 255, .98)) drop-shadow(0 2px 0 rgba(255, 255, 255, .98)) drop-shadow(0 -2px 0 rgba(255, 255, 255, .98)) drop-shadow(0 0 13px rgba(229, 251, 255, .85)) drop-shadow(0 20px 15px rgba(18, 35, 98, .28)); height: 100%; max-height: 430px; object-fit: contain; object-position: center bottom; width: 100%; }
 .film-character-feature--naru .film-character-feature-art { bottom: 6px; left: 1%; top: 8px; width: 69%; }
-.film-character-feature--ttori .film-character-feature-art { bottom: 70px; left: -2%; top: 30px; width: 55%; transform: rotate(-5deg); }
-.film-character-feature--kuu .film-character-feature-art { bottom: 56px; left: -3%; top: 10px; width: 55%; transform: rotate(-7deg); }
+.film-character-feature--ttori .film-character-feature-art { bottom: 70px; left: -2%; top: 30px; width: 72%; transform: rotate(-5deg); }
+.film-character-feature--kuu .film-character-feature-art { bottom: 56px; left: -3%; top: 10px; width: 73%; transform: rotate(-7deg); }
 .film-character-feature-copy { background: rgba(255, 255, 255, .88); border: 1px solid rgba(255, 255, 255, .72); border-radius: 24px; bottom: 22px; box-shadow: 0 18px 35px rgba(33, 42, 108, .17); min-height: 215px; padding: clamp(20px, 2vw, 29px) clamp(14px, 1.55vw, 24px) clamp(20px, 2vw, 29px) 27%; position: absolute; right: 0; width: 68%; z-index: 1; }
-.film-character-feature--ttori .film-character-feature-copy, .film-character-feature--kuu .film-character-feature-copy { padding-left: 32%; }
 .film-character-feature .film-character-role { color: #55429B; font-size: .7rem; }
 .film-character-feature h3 { color: #29294E; font-size: clamp(1.65rem, 2.1vw, 2.4rem); line-height: 1.1; margin: 8px 0 12px; }
 .film-character-feature h3 small { color: #8A7FAA; font-size: .48em; letter-spacing: .035em; white-space: nowrap; }
 .film-character-feature p { color: #383653; font-size: clamp(.73rem, .9vw, .88rem); line-height: 1.7; margin: 0 0 13px; word-break: keep-all; }
 .film-character-feature .film-character-trait { color: #487F83; font-size: .72rem; }
-@media (min-width: 701px) and (max-width: 1600px) {
+@media (min-width: 701px) and (max-width: 1180px) {
   .film-character-intro-grid { gap: 15px; grid-template-columns: 1fr; }
   .film-character-feature { min-height: 335px; }
   .film-character-feature-art, .film-character-feature--naru .film-character-feature-art { bottom: 0; left: 8%; top: 0; width: 42%; }
   .film-character-feature--ttori .film-character-feature-art, .film-character-feature--kuu .film-character-feature-art { bottom: 15px; left: 5%; top: 0; width: 50%; }
-  .film-character-feature-copy, .film-character-feature--ttori .film-character-feature-copy, .film-character-feature--kuu .film-character-feature-copy { bottom: 50px; min-height: 210px; padding: 24px 35px 24px 27%; right: 4%; width: 64%; }
+  .film-character-feature-copy { bottom: 50px; min-height: 210px; padding: 24px 35px 24px 27%; right: 4%; width: 64%; }
 }
 @media (max-width: 700px) {
   .film-character-intro-grid { gap: 30px; grid-template-columns: 1fr; }
-  .film-character-feature { min-height: 470px; }
-  .film-character-feature-art, .film-character-feature--naru .film-character-feature-art { bottom: auto; height: 250px; left: -4%; top: 0; width: 80%; }
-  .film-character-feature--ttori .film-character-feature-art, .film-character-feature--kuu .film-character-feature-art { bottom: auto; height: 250px; left: -7%; top: 0; width: 88%; }
-  .film-character-feature-copy, .film-character-feature--ttori .film-character-feature-copy, .film-character-feature--kuu .film-character-feature-copy { bottom: 0; min-height: 180px; padding: 20px 23px; right: 0; width: 82%; }
+  .film-character-feature { min-height: 430px; }
+  .film-character-feature-art, .film-character-feature--naru .film-character-feature-art { bottom: auto; height: 275px; left: -4%; top: 0; width: 80%; }
+  .film-character-feature--ttori .film-character-feature-art, .film-character-feature--kuu .film-character-feature-art { bottom: auto; height: 275px; left: -7%; top: 0; width: 88%; }
+  .film-character-feature-copy { bottom: 0; min-height: 180px; padding: 20px 23px; right: 0; width: 82%; }
   .film-character-feature h3 { font-size: clamp(1.55rem, 6vw, 2.1rem); }
   .film-character-feature p { font-size: .76rem; }
 }
