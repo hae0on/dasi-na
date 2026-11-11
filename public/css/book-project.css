@@ -404,33 +404,205 @@
 }
 
 
-/* Large freeform film characters */
-.film-character-intro-grid { align-items: end; gap: clamp(8px, 1.5vw, 24px); }
-.film-character-feature { isolation: isolate; min-height: clamp(400px, 34vw, 490px); position: relative; }
-.film-character-feature-art { align-items: flex-end; bottom: 28px; display: flex; justify-content: flex-start; left: -1%; position: absolute; top: 0; width: 69%; z-index: 2; }
-.film-character-feature-art img { filter: drop-shadow(2px 0 0 rgba(255, 255, 255, .98)) drop-shadow(-2px 0 0 rgba(255, 255, 255, .98)) drop-shadow(0 2px 0 rgba(255, 255, 255, .98)) drop-shadow(0 -2px 0 rgba(255, 255, 255, .98)) drop-shadow(0 0 13px rgba(229, 251, 255, .85)) drop-shadow(0 20px 15px rgba(18, 35, 98, .28)); height: 100%; max-height: 430px; object-fit: contain; object-position: center bottom; width: 100%; }
-.film-character-feature--naru .film-character-feature-art { bottom: 6px; left: 1%; top: 8px; width: 69%; }
-.film-character-feature--ttori .film-character-feature-art { bottom: 70px; left: -2%; top: 30px; width: 72%; transform: rotate(-5deg); }
-.film-character-feature--kuu .film-character-feature-art { bottom: 56px; left: -3%; top: 10px; width: 73%; transform: rotate(-7deg); }
-.film-character-feature-copy { background: rgba(255, 255, 255, .88); border: 1px solid rgba(255, 255, 255, .72); border-radius: 24px; bottom: 22px; box-shadow: 0 18px 35px rgba(33, 42, 108, .17); min-height: 215px; padding: clamp(20px, 2vw, 29px) clamp(14px, 1.55vw, 24px) clamp(20px, 2vw, 29px) 27%; position: absolute; right: 0; width: 68%; z-index: 1; }
-.film-character-feature .film-character-role { color: #55429B; font-size: .7rem; }
-.film-character-feature h3 { color: #29294E; font-size: clamp(1.65rem, 2.1vw, 2.4rem); line-height: 1.1; margin: 8px 0 12px; }
-.film-character-feature h3 small { color: #8A7FAA; font-size: .48em; letter-spacing: .035em; white-space: nowrap; }
-.film-character-feature p { color: #383653; font-size: clamp(.73rem, .9vw, .88rem); line-height: 1.7; margin: 0 0 13px; word-break: keep-all; }
-.film-character-feature .film-character-trait { color: #487F83; font-size: .72rem; }
-@media (min-width: 701px) and (max-width: 1180px) {
-  .film-character-intro-grid { gap: 15px; grid-template-columns: 1fr; }
-  .film-character-feature { min-height: 335px; }
-  .film-character-feature-art, .film-character-feature--naru .film-character-feature-art { bottom: 0; left: 8%; top: 0; width: 42%; }
-  .film-character-feature--ttori .film-character-feature-art, .film-character-feature--kuu .film-character-feature-art { bottom: 15px; left: 5%; top: 0; width: 50%; }
-  .film-character-feature-copy { bottom: 50px; min-height: 210px; padding: 24px 35px 24px 27%; right: 4%; width: 64%; }
+.film-character-intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: clamp(8px, 1.5vw, 24px);
 }
+
+.film-character-feature {
+  isolation: isolate;
+  min-height: clamp(400px, 34vw, 490px);
+  position: relative;
+}
+
+.film-character-feature-art {
+  align-items: flex-end;
+  bottom: 28px;
+  display: flex;
+  justify-content: flex-start;
+  left: -1%;
+  position: absolute;
+  top: 0;
+  width: 69%;
+  z-index: 2;
+}
+
+.film-character-feature-art img {
+  filter:
+    drop-shadow(2px 0 0 rgba(255, 255, 255, .98))
+    drop-shadow(-2px 0 0 rgba(255, 255, 255, .98))
+    drop-shadow(0 2px 0 rgba(255, 255, 255, .98))
+    drop-shadow(0 -2px 0 rgba(255, 255, 255, .98))
+    drop-shadow(0 0 13px rgba(229, 251, 255, .85))
+    drop-shadow(0 20px 15px rgba(18, 35, 98, .28));
+  height: 100%;
+  max-height: 430px;
+  object-fit: contain;
+  object-position: center bottom;
+  width: 100%;
+}
+
+.film-character-feature--naru .film-character-feature-art {
+  bottom: 6px;
+  left: 1%;
+  top: 8px;
+  width: 69%;
+}
+
+.film-character-feature--ttori .film-character-feature-art {
+  bottom: 70px;
+  left: -2%;
+  top: 30px;
+  width: 55%;
+  transform: rotate(-5deg);
+}
+
+.film-character-feature--kuu .film-character-feature-art {
+  bottom: 56px;
+  left: -3%;
+  top: 10px;
+  width: 55%;
+  transform: rotate(-7deg);
+}
+
+.film-character-feature-copy {
+  background: rgba(255, 255, 255, .88);
+  border: 1px solid rgba(255, 255, 255, .72);
+  border-radius: 24px;
+  bottom: 22px;
+  box-shadow: 0 18px 35px rgba(33, 42, 108, .17);
+  min-height: 215px;
+  padding: clamp(20px, 2vw, 29px)
+           clamp(14px, 1.55vw, 24px)
+           clamp(20px, 2vw, 29px)
+           27%;
+  position: absolute;
+  right: 0;
+  width: 68%;
+  z-index: 1;
+}
+
+.film-character-feature--ttori .film-character-feature-copy,
+.film-character-feature--kuu .film-character-feature-copy {
+  padding-left: 32%;
+}
+
+.film-character-feature .film-character-role {
+  color: #55429B;
+  font-size: .7rem;
+}
+
+.film-character-feature h3 {
+  color: #29294E;
+  font-size: clamp(1.65rem, 2.1vw, 2.4rem);
+  line-height: 1.1;
+  margin: 8px 0 12px;
+}
+
+.film-character-feature h3 small {
+  color: #8A7FAA;
+  font-size: .48em;
+  letter-spacing: .035em;
+  white-space: nowrap;
+}
+
+.film-character-feature p {
+  color: #383653;
+  font-size: clamp(.73rem, .9vw, .88rem);
+  line-height: 1.7;
+  margin: 0 0 13px;
+  word-break: keep-all;
+}
+
+.film-character-feature .film-character-trait {
+  color: #487F83;
+  font-size: .72rem;
+}
+
+/* 화면 확대 등으로 표시 폭이 줄어들면 한 명씩 배치 */
+@media (min-width: 701px) and (max-width: 1600px) {
+  .film-character-intro-grid {
+    gap: 15px;
+    grid-template-columns: 1fr;
+  }
+
+  .film-character-feature {
+    min-height: 335px;
+  }
+
+  .film-character-feature-art,
+  .film-character-feature--naru .film-character-feature-art {
+    bottom: 0;
+    left: 8%;
+    top: 0;
+    width: 42%;
+  }
+
+  .film-character-feature--ttori .film-character-feature-art,
+  .film-character-feature--kuu .film-character-feature-art {
+    bottom: 15px;
+    left: 5%;
+    top: 0;
+    width: 50%;
+  }
+
+  .film-character-feature-copy,
+  .film-character-feature--ttori .film-character-feature-copy,
+  .film-character-feature--kuu .film-character-feature-copy {
+    bottom: 50px;
+    min-height: 210px;
+    padding: 24px 35px 24px 27%;
+    right: 4%;
+    width: 64%;
+  }
+}
+
+/* 모바일 */
 @media (max-width: 700px) {
-  .film-character-intro-grid { gap: 30px; grid-template-columns: 1fr; }
-  .film-character-feature { min-height: 430px; }
-  .film-character-feature-art, .film-character-feature--naru .film-character-feature-art { bottom: auto; height: 275px; left: -4%; top: 0; width: 80%; }
-  .film-character-feature--ttori .film-character-feature-art, .film-character-feature--kuu .film-character-feature-art { bottom: auto; height: 275px; left: -7%; top: 0; width: 88%; }
-  .film-character-feature-copy { bottom: 0; min-height: 180px; padding: 20px 23px; right: 0; width: 82%; }
-  .film-character-feature h3 { font-size: clamp(1.55rem, 6vw, 2.1rem); }
-  .film-character-feature p { font-size: .76rem; }
+  .film-character-intro-grid {
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+
+  .film-character-feature {
+    min-height: 470px;
+  }
+
+  .film-character-feature-art,
+  .film-character-feature--naru .film-character-feature-art {
+    bottom: auto;
+    height: 250px;
+    left: -4%;
+    top: 0;
+    width: 80%;
+  }
+
+  .film-character-feature--ttori .film-character-feature-art,
+  .film-character-feature--kuu .film-character-feature-art {
+    bottom: auto;
+    height: 250px;
+    left: -7%;
+    top: 0;
+    width: 88%;
+  }
+
+  .film-character-feature-copy,
+  .film-character-feature--ttori .film-character-feature-copy,
+  .film-character-feature--kuu .film-character-feature-copy {
+    bottom: 0;
+    min-height: 180px;
+    padding: 20px 23px;
+    right: 0;
+    width: 82%;
+  }
+
+  .film-character-feature h3 {
+    font-size: clamp(1.55rem, 6vw, 2.1rem);
+  }
+
+  .film-character-feature p {
+    font-size: .76rem;
+  }
 }
