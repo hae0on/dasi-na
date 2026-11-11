@@ -162,7 +162,7 @@
 .film-scene-5 { background-position: 100% 100%; }
 .film-scene-list li > span { color: var(--ink); display: block; font-size: .73rem; font-weight: 700; line-height: 1.4; padding: 9px 2px 0; word-break: keep-all; }
 .film-project-highlights { margin-top: clamp(18px, 2.6vw, 36px); }
-.film-project-highlights .book-classroom-card { border-top-color: var(--primary); }
+.film-project-highlights .book-classroom-card { border-top: 1px solid var(--line); }
 .film-project-highlights .book-classroom-list li::before { background: #D7C8F6; }
 .film-page-body .film-approach { background: #F1EDFC; }
 .film-page-body .film-characters { background: #F1EDFC; }
